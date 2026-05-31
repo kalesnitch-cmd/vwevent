@@ -29,7 +29,7 @@
     <link rel="icon" type="image/png" href="assets/images/favicon.png?v=3">
 
     <!-- Preload LCP Image -->
-    <link rel="preload" href="assets/images/portfolio/arki/decor_2.webp" as="image" type="image/webp">
+    <link rel="preload" href="assets/images/hero1.webp" as="image" type="image/webp">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -110,12 +110,12 @@
         <!-- Hero Section with Fading Background Slider -->
         <section id="hero" class="hero-section">
             <div class="hero-slider">
-                <div class="slide active" style="background-image: linear-gradient(rgba(27, 26, 24, 0.4), rgba(27, 26, 24, 0.75)), url('assets/images/portfolio/arki/decor_2.webp');"></div>
-                <div class="slide" style="background-image: linear-gradient(rgba(27, 26, 24, 0.4), rgba(27, 26, 24, 0.75)), url('assets/images/portfolio/prezidium/decor_5.webp');"></div>
-                <div class="slide" style="background-image: linear-gradient(rgba(27, 26, 24, 0.4), rgba(27, 26, 24, 0.75)), url('assets/images/portfolio/prezidium/decor_9.webp');"></div>
-                <div class="slide" style="background-image: linear-gradient(rgba(27, 26, 24, 0.4), rgba(27, 26, 24, 0.75)), url('assets/images/portfolio/arki/decor_13.webp');"></div>
-                <div class="slide" style="background-image: linear-gradient(rgba(27, 26, 24, 0.4), rgba(27, 26, 24, 0.75)), url('assets/images/portfolio/zal/decor_26.webp');"></div>
-                <div class="slide" style="background-image: linear-gradient(rgba(27, 26, 24, 0.4), rgba(27, 26, 24, 0.75)), url('assets/images/portfolio/zal/decor_29.webp');"></div>
+                <div class="slide active" style="background-image: linear-gradient(rgba(27, 26, 24, 0.4), rgba(27, 26, 24, 0.75)), url('assets/images/hero1.webp');"></div>
+                <div class="slide" style="background-image: linear-gradient(rgba(27, 26, 24, 0.4), rgba(27, 26, 24, 0.75)), url('assets/images/hero2.webp');"></div>
+                <div class="slide" style="background-image: linear-gradient(rgba(27, 26, 24, 0.4), rgba(27, 26, 24, 0.75)), url('assets/images/hero3.webp');"></div>
+                <div class="slide" style="background-image: linear-gradient(rgba(27, 26, 24, 0.4), rgba(27, 26, 24, 0.75)), url('assets/images/hero4.webp');"></div>
+                <div class="slide" style="background-image: linear-gradient(rgba(27, 26, 24, 0.4), rgba(27, 26, 24, 0.75)), url('assets/images/hero5.webp');"></div>
+                <div class="slide" style="background-image: linear-gradient(rgba(27, 26, 24, 0.4), rgba(27, 26, 24, 0.75)), url('assets/images/hero6.webp');"></div>
             </div>
 
             <div class="hero-content container">
@@ -767,22 +767,6 @@
                                 <div class="form-group">
                                     <label for="form-date">Дата свадьбы</label>
                                     <input type="date" id="form-date">
-                                    <script>
-                                        (function() {
-                                            const dInput = document.getElementById('form-date');
-                                            if (dInput) {
-                                                const today = new Date();
-                                                const yyyy = today.getFullYear();
-                                                let mm = today.getMonth() + 1;
-                                                let dd = today.getDate();
-                                                if (mm < 10) mm = '0' + mm;
-                                                if (dd < 10) dd = '0' + dd;
-                                                const formattedToday = `${yyyy}-${mm}-${dd}`;
-                                                dInput.value = formattedToday;
-                                                dInput.min = formattedToday;
-                                            }
-                                        })();
-                                    </script>
                                 </div>
                             </div>
                             <div class="form-group" style="margin-top: 10px;">
