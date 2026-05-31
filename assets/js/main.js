@@ -543,12 +543,18 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (vibe === 'modern') {
             recommendedStyle = "Геометрический Модерн";
             styleDesc = "Современный минимализм, строгие геометрические формы, игра света и неона, монохромные флористические акценты и стильные индустриальные детали.";
-        } else if (vibe === 'boho') {
-            recommendedStyle = "Бохо-Шик & Рустик";
-            styleDesc = "Свободная, богемная атмосфера. Декор с использованием сухоцветов, пампасной травы, ковров, натурального дерева и теплых ретро-гирлянд.";
+        } else if (vibe === 'other-vibe') {
+            recommendedStyle = "Индивидуальный концепт";
+            styleDesc = "Вы выбрали собственный вариант атмосферы! Мы разработаем неповторимую концепцию оформления с нуля, учитывая ваши пожелания, выбранную локацию и цветовую гамму.";
         } else if (vibe === 'cozy') {
             recommendedStyle = "Уютный Ужин в Семейном кругу";
             styleDesc = "Душевный камерный декор. Внимание к деталям: индивидуальные карточки меню, текстильные салфетки, эвкалипт и множество маленьких свечей.";
+        }
+
+        if (colors === 'other-color' && vibe !== 'other-vibe') {
+            styleDesc += " Цветовая гамма оформления будет полностью адаптирована под ваши пожелания.";
+        } else if (colors === 'white-crystal' && vibe === 'classic') {
+            styleDesc = "Хрустальный блеск и изысканная роскошь. Оформление с использованием прозрачных элементов, подвесных кристаллов, зеркал и белоснежной флористики.";
         }
 
         // Budget Estimation based on guests count and style factor
@@ -611,6 +617,19 @@ document.addEventListener('DOMContentLoaded', () => {
             const style = document.querySelector('.recommended-style-name')?.textContent || '';
             const budget = document.querySelector('.estimated-price')?.textContent || '';
 
+            // Extract raw answer text labels to send to Telegram
+            const locationEl = document.querySelector('input[name="location"]:checked')?.closest('.quiz-option')?.querySelector('.option-title');
+            const colorEl = document.querySelector('input[name="colors"]:checked')?.closest('.quiz-option')?.querySelector('.option-title');
+            const guestsEl = document.querySelector('input[name="guests"]:checked')?.closest('.quiz-option')?.querySelector('.option-title');
+            const vibeEl = document.querySelector('input[name="vibe"]:checked')?.closest('.quiz-option')?.querySelector('.option-title');
+            
+            const answersText = {
+                location: locationEl?.textContent?.trim() || '',
+                color: colorEl?.textContent?.trim() || '',
+                guests: guestsEl?.textContent?.trim() || '',
+                vibe: vibeEl?.textContent?.trim() || ''
+            };
+
             // Play notification chime
             playNotificationSound();
 
@@ -625,7 +644,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     date,
                     style,
                     budget,
-                    preference
+                    preference,
+                    answers: answersText
                 })
             }).catch(err => console.error('Telegram notification error:', err));
             
@@ -635,7 +655,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             if (successModal) {
                 if (successMsg) {
-                    successMsg.innerHTML = `Спасибо, <strong>${name}</strong>! Мы получили ваши ответы по квизу. Мы свяжемся с вами по номеру <strong>${phone}</strong> в течение 2 часов с готовым PDF-файлом концепции и подробной сметой.`;
+                    successMsg.innerHTML = `Спасибо, <strong>${name}</strong>! Мы получили ваши ответы по квизу. Мы свяжемся с вами по номеру <strong>${phone}</strong> в течение 2 часов с готовым индивидуальным расчетом сметы и разбором стиля.`;
                 }
                 successModal.classList.add('active');
             }

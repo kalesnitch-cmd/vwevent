@@ -19,7 +19,7 @@ export default async function handler(req, res) {
 
     try {
         const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
-        const { type, name, phone, date, packageVal, message, style, budget, preference } = body;
+        const { type, name, phone, date, packageVal, message, style, budget, preference, answers } = body;
 
         const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || '8592519452:AAEWum8JW3ZgB1MU_IKaCokhpZxokTO3KmI';
 
@@ -80,6 +80,15 @@ export default async function handler(req, res) {
                    `🎨 *Стиль:* ${style}\n` +
                    `💰 *Бюджет:* ${budget}\n` +
                    `✉️ *Способ связи:* ${prefText}\n`;
+
+            if (answers) {
+                text += `\n📝 *Ответы на вопросы квиза:*\n` +
+                       `• *Локация:* ${answers.location || 'Не выбрана'}\n` +
+                       `• *Гамма:* ${answers.color || 'Не выбрана'}\n` +
+                       `• *Количество гостей:* ${answers.guests || 'Не указано'}\n` +
+                       `• *Атмосфера:* ${answers.vibe || 'Не выбрана'}\n\n`;
+            }
+
             if (preference === 'telegram') {
                 text += `🔗 *Telegram:* [Открыть чат](${telegramLink}) | [В приложении](${telegramDeepLink})\n`;
             } else if (preference === 'whatsapp') {

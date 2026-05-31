@@ -1285,6 +1285,16 @@ ul {
     background: linear-gradient(135deg, #1f2d22 50%, #bc8f8f 50%);
 }
 
+.color-preview.white-crystal {
+    background: linear-gradient(135deg, #ffffff 40%, #e1f5fe 40%, #b3e5fc 100%);
+    border: 1px solid rgba(197, 168, 128, 0.2);
+}
+
+.color-preview.rgb-palette {
+    background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
+}
+
+
 /* Results Step styling */
 .quiz-result-step {
     text-align: center;
