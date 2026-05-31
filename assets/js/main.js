@@ -615,7 +615,7 @@ document.addEventListener('DOMContentLoaded', () => {
             playNotificationSound();
 
             // Send notification to Telegram bot
-            fetch('/api/send-notification', {
+            fetch('https://verywell-decor.vercel.app/api/send-notification', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -697,7 +697,7 @@ document.addEventListener('DOMContentLoaded', () => {
             playNotificationSound();
 
             // Send notification to Telegram bot
-            fetch('/api/send-notification', {
+            fetch('https://verywell-decor.vercel.app/api/send-notification', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
