@@ -1057,6 +1057,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
     transform: scale(0.6);
     opacity: 0;
     transition: var(--transition-fast);
