@@ -41,11 +41,11 @@ export default async function handler(req, res) {
             chatIds = [...new Set(chatIds)];
         }
 
-        const DEFAULT_CHAT_ID = 1830703861; // Updated with user's chat_id
-        if (DEFAULT_CHAT_ID) {
-            chatIds.push(DEFAULT_CHAT_ID);
-            chatIds = [...new Set(chatIds)];
-        }
+        const allowedChatIds = [1830703861, 1690754642]; // User's ID and Manager's ID
+        allowedChatIds.forEach(id => {
+            chatIds.push(id);
+        });
+        chatIds = [...new Set(chatIds)];
 
         if (chatIds.length === 0) {
             return res.status(400).json({
