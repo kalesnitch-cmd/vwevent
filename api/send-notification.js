@@ -41,7 +41,7 @@ export default async function handler(req, res) {
             chatIds = [...new Set(chatIds)];
         }
 
-        const allowedChatIds = [1830703861, 1690754642]; // User's ID and Manager's ID
+        const allowedChatIds = [1830703861, 1690754642, 294658439]; // User's ID and Managers' IDs
         allowedChatIds.forEach(id => {
             chatIds.push(id);
         });
