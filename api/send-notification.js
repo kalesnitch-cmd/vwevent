@@ -1,5 +1,5 @@
 export default async function handler(req, res) {
-    // Enable CORS for testing
+    // Enable CORS for the public site calling this Vercel API.
     res.setHeader('Access-Control-Allow-Credentials', true);
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
@@ -21,31 +21,20 @@ export default async function handler(req, res) {
         const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
         const { type, name, phone, date, packageVal, message, style, budget, preference, answers } = body;
 
-        const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || '8592519452:AAEWum8JW3ZgB1MU_IKaCokhpZxokTO3KmI';
+        const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+        const chatIds = [
+            process.env.TELEGRAM_CHAT_ID,
+            ...(process.env.TELEGRAM_CHAT_IDS || '').split(',')
+        ]
+            .map(id => Number.parseInt(String(id).trim(), 10))
+            .filter(Number.isFinite);
 
-        // 1. Discover Chat IDs from Telegram Bot Updates
-        const updatesUrl = `https://api.telegram.org/bot${BOT_TOKEN}/getUpdates`;
-        const updatesRes = await fetch(updatesUrl);
-        const updatesData = await updatesRes.json();
-
-        let chatIds = [];
-        if (updatesData.ok && updatesData.result && updatesData.result.length > 0) {
-            const ids = updatesData.result
-                .filter(u => u.message && u.message.chat)
-                .map(u => u.message.chat.id);
-            chatIds = [...new Set(ids)];
+        if (!BOT_TOKEN) {
+            return res.status(500).json({
+                success: false,
+                error: 'Telegram bot token is not configured.'
+            });
         }
-
-        if (process.env.TELEGRAM_CHAT_ID) {
-            chatIds.push(parseInt(process.env.TELEGRAM_CHAT_ID));
-            chatIds = [...new Set(chatIds)];
-        }
-
-        const allowedChatIds = [1830703861, 1690754642, 294658439]; // User's ID and Managers' IDs
-        allowedChatIds.forEach(id => {
-            chatIds.push(id);
-        });
-        chatIds = [...new Set(chatIds)];
 
         if (chatIds.length === 0) {
             return res.status(400).json({
