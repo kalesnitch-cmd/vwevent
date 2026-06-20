@@ -340,7 +340,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const locEl = item.querySelector('.location');
         const loc = locEl ? locEl.innerHTML : '';
 
-        lightboxImg.src = item.getAttribute('data-src');
+        lightboxImg.src = img.src;
         lightboxImg.alt = img.alt;
         lightboxTitle.textContent = title;
         lightboxCategory.textContent = cat;
