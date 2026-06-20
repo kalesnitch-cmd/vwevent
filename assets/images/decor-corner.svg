@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" fill="none">
+  <!-- Elegant background foliage branches -->
+  <!-- Left branch -->
+  <path d="M75,135 C55,135 30,120 15,95" stroke="currentColor" stroke-width="0.8" stroke-dasharray="2 2"/>
+  <path d="M50,132 C42,138 32,135 35,127 C38,119 46,124 50,132 Z" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="0.6"/>
+  <path d="M30,118 C20,123 12,114 18,105 C24,96 32,110 30,118 Z" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="0.6"/>
+  <path d="M18,92 C10,95 5,88 10,80 C15,72 22,85 18,92 Z" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="0.6"/>
+  
+  <!-- Top branch -->
+  <path d="M135,75 C135,55 120,30 95,15" stroke="currentColor" stroke-width="0.8" stroke-dasharray="2 2"/>
+  <path d="M132,50 C138,42 135,32 127,35 C119,38 124,46 132,50 Z" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="0.6"/>
+  <path d="M118,30 C123,20 114,12 105,18 C96,24 110,32 118,30 Z" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="0.6"/>
+  <path d="M92,18 C95,10 88,5 80,10 C72,15 85,22 92,18 Z" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="0.6"/>
+
+  <!-- Main Peony/Rose Flower (Center at 75,75) -->
+  <circle cx="75" cy="75" r="32" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-width="0.8" stroke-dasharray="2 2"/>
+  <!-- Overlapping Petals (bezier curves) -->
+  <path d="M75,46 C60,46 48,58 48,75 C48,92 60,104 75,104 C90,104 102,92 102,75 C102,58 90,46 75,46 Z" stroke="currentColor" stroke-width="1.2"/>
+  <path d="M75,54 C63,54 56,62 56,75 C56,88 63,96 75,96 C87,96 94,88 94,75 C94,62 87,54 75,54 Z" stroke="currentColor" stroke-width="0.9" fill="currentColor" fill-opacity="0.03"/>
+  <path d="M75,61 C67,61 63,66 63,75 C63,84 67,89 75,89 C83,89 87,84 87,75 C87,66 83,61 75,61 Z" stroke="currentColor" stroke-width="0.8"/>
+  <path d="M75,67 C70,67 68,70 68,75 C68,80 70,83 75,83 C80,83 82,80 82,75 C82,70 80,67 75,67 Z" stroke="currentColor" stroke-width="0.7"/>
+  <path d="M75,72 C73,72 72,73 72,75 C72,77 73,78 75,78 C77,78 78,77 78,75 C78,73 77,72 75,72 Z" fill="currentColor"/>
+
+  <!-- Secondary Flower (Center at 108,108) -->
+  <circle cx="108" cy="108" r="18" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.6" stroke-dasharray="2 2"/>
+  <path d="M108,93 C99,93 93,100 93,108 C93,116 99,123 108,123 C117,123 123,116 123,108 C123,100 117,93 108,93 Z" stroke="currentColor" stroke-width="0.9"/>
+  <path d="M108,99 C102,99 98,103 98,108 C98,113 102,117 108,117 C114,117 118,113 118,108 C118,103 114,99 108,99 Z" stroke="currentColor" stroke-width="0.7"/>
+  <circle cx="108" cy="108" r="3" fill="currentColor"/>
+
+  <!-- Secondary Flower (Center at 42,42) -->
+  <circle cx="42" cy="42" r="18" fill="currentColor" fill-opacity="0.03" stroke="currentColor" stroke-width="0.6" stroke-dasharray="2 2"/>
+  <path d="M42,27 C33,27 27,34 27,42 C27,50 33,57 42,57 C51,57 57,50 57,42 C57,34 51,27 42,27 Z" stroke="currentColor" stroke-width="0.9"/>
+  <path d="M42,33 C36,33 32,37 32,42 C32,47 36,51 42,51 C48,51 52,47 52,42 C52,37 48,33 42,33 Z" stroke="currentColor" stroke-width="0.7"/>
+  <circle cx="42" cy="42" r="3" fill="currentColor"/>
+
+  <!-- Delicate foliage accents -->
+  <path d="M60,112 Q40,118 22,128" stroke="currentColor" stroke-width="0.8"/>
+  <path d="M22,128 C15,125 18,117 25,115 Z" fill="currentColor" fill-opacity="0.3"/>
+  <path d="M35,120 Q20,123 12,132" stroke="currentColor" stroke-width="0.6"/>
+  
+  <path d="M112,60 Q118,40 128,22" stroke="currentColor" stroke-width="0.8"/>
+  <path d="M128,22 C125,15 117,18 115,25 Z" fill="currentColor" fill-opacity="0.3"/>
+  <path d="M120,35 Q123,20 132,12" stroke="currentColor" stroke-width="0.6"/>
+</svg>

@@ -1,0 +1,56 @@
+    <!-- Premium Lightbox Modal for Gallery Viewing -->
+    <div id="lightbox-modal" class="lightbox-modal">
+        <button class="lightbox-close" aria-label="Закрыть"><i data-lucide="x"></i></button>
+        <button class="lightbox-nav prev-pic" aria-label="Предыдущее фото"><i data-lucide="chevron-left"></i></button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Детали декора">
+            <div class="lightbox-caption-box">
+                <span id="lightbox-category" class="lightbox-category gold">Классический стиль</span>
+                <h4 id="lightbox-title">Золотая симфония</h4>
+                <p id="lightbox-location"><i data-lucide="map-pin"></i> Ресторан Гринн</p>
+            </div>
+        </div>
+        <button class="lightbox-nav next-pic" aria-label="Следующее фото"><i data-lucide="chevron-right"></i></button>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="success-modal">
+        <div class="success-box glass-panel">
+            <button class="success-close"><i data-lucide="x"></i></button>
+            <div class="success-icon"><i data-lucide="sparkles"></i></div>
+            <h3>Ваша заявка принята!</h3>
+            <p id="success-message">Мы свяжемся с вами в течение 2 часов, чтобы обсудить детали вашего торжества.</p>
+            <button class="btn btn-primary btn-sm close-success-btn">Отлично</button>
+        </div>
+    </div>
+
+    <!-- Floating Chat Widgets -->
+    <div class="floating-contact-widgets">
+        <div class="widgets-trigger" aria-label="Открыть контакты">
+            <i data-lucide="message-circle" class="trigger-icon open-icon"></i>
+            <i data-lucide="x" class="trigger-icon close-icon" style="display: none;"></i>
+        </div>
+        <div class="widgets-list">
+            <a href="https://max.ru/u/f9LHodD0cOJ4Jc7xIibcgKLWkVCSGxh7HkOtTG8Z7isYyR0eCJTHIOxyhcg" target="_blank" class="widget-btn max-messenger" aria-label="Написать в MAX"><span class="messenger-label">MAX</span></a>
+            <a href="https://wa.me/79207222202" target="_blank" class="widget-btn whatsapp" aria-label="Написать в WhatsApp">
+                <svg class="messenger-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L3.2 496l136.2-35.6c32.8 17.9 69.6 27.3 107.1 27.3h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-79.8 20.9 21.3-77.8-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+            </a>
+            <a href="https://t.me/decorverywell46" target="_blank" class="widget-btn telegram" aria-label="Написать в Telegram">
+                <svg class="messenger-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21.73 3.23a1.14 1.14 0 0 0-1.18-.18L3.4 9.68c-.72.28-.7 1.31.04 1.56l4.3 1.43 1.65 5.17c.22.68 1.08.89 1.58.39l2.47-2.47 4.35 3.19c.63.46 1.52.11 1.68-.65l3.04-14.02a1.14 1.14 0 0 0-.78-1.05ZM18.08 6.6l-7.73 6.84-.32 2.86-1.08-3.38 9.13-6.32Z"/></svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top-btn" aria-label="Наверх">
+        <i data-lucide="arrow-up"></i>
+    </button>
+
+    <!-- Cookie Notice Banner -->
+    <div id="cookie-notice" class="cookie-notice glass-panel">
+        <div class="cookie-content">
+            <i data-lucide="cookie" class="cookie-icon"></i>
+            <p>Мы используем cookies для улучшения работы сайта. <a href="{{rootPath}}privacy.html" class="cookie-link">Политика конфиденциальности</a>.</p>
+        </div>
+        <button id="cookie-accept-btn" class="btn btn-primary btn-sm">OK</button>
+    </div>

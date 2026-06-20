@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Minimal eucalyptus stem -->
+  <path d="M15,90 C30,70 45,40 85,15" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- Alternating delicate leaves -->
+  <path d="M30,73 C20,70 14,58 22,54 C30,50 36,62 33,70 Z" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="0.8"/>
+  <path d="M32,70 C42,74 48,66 44,56 C40,46 32,56 32,66 Z" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="0.8"/>
+  <path d="M48,51 C38,45 34,31 43,29 C52,27 54,41 50,49 Z" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="0.8"/>
+  <path d="M49,47 C59,51 65,41 60,31 C55,21 49,34 49,45 Z" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="0.8"/>
+  <path d="M66,32 C58,24 56,13 64,12 C72,11 73,23 68,29 Z" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="0.8"/>
+  <path d="M67,29 C77,32 82,23 77,15 C72,7 67,18 67,26 Z" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-width="0.8"/>
+  <!-- Leaf Tip -->
+  <path d="M83,16 C83,7 74,6 75,15 C76,24 83,23 83,16 Z" fill="currentColor" fill-opacity="0.15" stroke="currentColor" stroke-width="0.8"/>
+</svg>

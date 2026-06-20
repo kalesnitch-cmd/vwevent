@@ -5,167 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Very Well | Свадебный декор и оформление свадеб в Курске</title>
     <meta name="description" content="Праздничное Агентство «Very Well» Ольги Беляевой предлагает профессиональный свадебный декор в Курске, оформление зала на свадьбу, ведение свадьбы и организацию праздников под ключ.">
-    <meta name="keywords" content="свадебный декор курск, оформление свадеб, Very Well">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Structured Data (JSON-LD) for Google Site Name -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Very Well - Студия декора",
-      "alternateName": ["Студия декора Very Well", "Вэри Велл"],
-      "url": "https://vwevent.ru/"
-    }
-    </script>
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Very Well — Праздничное агентство & Декор Ольги Беляевой">
-    <meta property="og:description" content="Изысканное оформление свадебных торжеств по всей России. Пройдите квиз и получите расчет стоимости проекта.">
-    <meta property="og:image" content="assets/images/hero_decor_1.webp">
-    <meta property="og:type" content="website">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/favicon.png?v=3">
-
-    <!-- Preload LCP Image -->
-    <link rel="preload" href="assets/images/hero1.webp" as="image" type="image/webp">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"></noscript>
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.min.css">
+    {{> head-common }}
 </head>
-<body>
+<body class="theme-white-bridal">
 
-    <!-- Custom Cursor (Premium Micro-interaction) -->
-    <div class="custom-cursor"></div>
-    <div class="custom-cursor-follower"></div>
-
-    <!-- Header Navigation -->
-    <header class="main-header">
-        <div class="header-container">
-            <a href="#" class="logo-wrapper">
-                <img src="assets/images/logo.webp" alt="Very Well Décor Logo" class="header-logo" width="42" height="42">
-                <div class="logo-text">
-                    <span class="brand-name">Very Well</span>
-                    <span class="brand-sub">DÉCOR STUDIO</span>
-                </div>
-            </a>
-
-            <!-- Desktop Menu -->
-            <nav class="desktop-nav">
-                <ul>
-                    <li><a href="#hero" class="nav-link active">Главная</a></li>
-                    <li><a href="#about" class="nav-link">О нас</a></li>
-                    <li><a href="/portfolio" class="nav-link">Портфолио</a></li>
-                    <li><a href="#quiz" class="nav-link">Подбор стиля</a></li>
-                    <li><a href="#prices" class="nav-link">Услуги</a></li>
-                    <li><a href="#contacts" class="nav-link">Контакты</a></li>
-                </ul>
-            </nav>
-
-            <!-- Action Button -->
-            <div class="header-cta">
-                <a href="#contacts" class="btn btn-outline btn-sm">Обсудить проект</a>
-            </div>
-
-            <!-- Hamburger Button -->
-            <button class="menu-toggle" aria-label="Открыть меню">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-        </div>
-
-        <!-- Mobile Overlay Menu -->
-        <div class="mobile-menu-overlay">
-            <nav class="mobile-nav">
-                <ul>
-                    <li><a href="#hero" class="mobile-nav-link">Главная</a></li>
-                    <li><a href="#about" class="mobile-nav-link">О нас</a></li>
-                    <li><a href="/portfolio" class="mobile-nav-link">Портфолио</a></li>
-                    <li><a href="#quiz" class="mobile-nav-link">Подбор стиля</a></li>
-                    <li><a href="#prices" class="mobile-nav-link">Услуги и Цены</a></li>
-                    <li><a href="#contacts" class="mobile-nav-link">Контакты</a></li>
-                </ul>
-                <div class="mobile-menu-footer">
-                     <a href="tel:+79207222202" class="phone-link">+7 (920) 722-22-02</a>
-                    <div class="mobile-socials">
-                        <a href="https://instagram.com/decorverywell" target="_blank" class="social-icon-btn" aria-label="Instagram"><i data-lucide="instagram"></i></a>
-                        <a href="https://t.me/decorverywell46" target="_blank" class="social-icon-btn" aria-label="Telegram"><i data-lucide="send"></i></a>
-                        <a href="https://wa.me/79207222202" target="_blank" class="social-icon-btn" aria-label="WhatsApp"><i data-lucide="phone"></i></a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
+    {{> header }}
 
     <main>
         
-        <!-- Hero Section with Fading Background Slider -->
+        <!-- Hero Section with Static Landscape Background (LIGHT) -->
         <section id="hero" class="hero-section">
-            <div class="hero-slider">
-                <div class="slide active" style="background-image: linear-gradient(rgba(27, 26, 24, 0.4), rgba(27, 26, 24, 0.75)), url('assets/images/hero1.webp');"></div>
-                <div class="slide" style="background-image: linear-gradient(rgba(27, 26, 24, 0.4), rgba(27, 26, 24, 0.75)), url('assets/images/hero2.webp');"></div>
-                <div class="slide" style="background-image: linear-gradient(rgba(27, 26, 24, 0.4), rgba(27, 26, 24, 0.75)), url('assets/images/hero3.webp');"></div>
-                <div class="slide" style="background-image: linear-gradient(rgba(27, 26, 24, 0.4), rgba(27, 26, 24, 0.75)), url('assets/images/hero4.webp');"></div>
-                <div class="slide" style="background-image: linear-gradient(rgba(27, 26, 24, 0.4), rgba(27, 26, 24, 0.75)), url('assets/images/hero5.webp');"></div>
-                <div class="slide" style="background-image: linear-gradient(rgba(27, 26, 24, 0.4), rgba(27, 26, 24, 0.75)), url('assets/images/hero6.webp');"></div>
-            </div>
-
+            <div class="hero-bg"></div>
             <div class="hero-content container">
-                <span class="hero-subtitle animate-on-load">Very Well Décor Studio</span>
-                <h1 class="hero-title animate-on-load delay-1">Искусство свадебного оформления</h1>
+                <span class="hero-subtitle animate-on-load">Very Well Decor Studio</span>
+                <h1 class="hero-title animate-on-load delay-1">Место, где начинается ваша история любви</h1>
                 <p class="hero-description animate-on-load delay-2">
-                    Профессиональный декоратор Ольга Беляева и команда Very Well предлагают изысканное оформление зала на свадьбу в Курске, украшение свадьбы, ведение свадьбы и организацию праздников под ключ.
+                    Свадебный декор под ключ: церемония, зал, флористика и детали в единой эстетике.
                 </p>
                 <div class="hero-actions animate-on-load delay-3">
-                    <a href="#quiz" class="btn btn-primary">Подобрать стиль свадьбы</a>
-                    <a href="#portfolio" class="btn btn-outline-white">Смотреть работы</a>
+                    <a href="#contacts" class="btn btn-primary">Обсудить проект</a>
+                    <a href="portfolio.html" class="btn btn-outline">Смотреть портфолио</a>
                 </div>
             </div>
 
-            <div class="hero-bottom-bar container">
+            <!-- Location Badge at the bottom right -->
+            <div class="hero-location-wrapper animate-on-load delay-4">
                 <div class="location-badge">
                     <i data-lucide="map-pin"></i>
-                    <span>Курск</span>
-                </div>
-                <div class="slider-controls">
-                    <button class="slide-control-btn prev" aria-label="Предыдущий слайд"><i data-lucide="chevron-left"></i></button>
-                    <div class="slider-dots">
-                        <span class="dot active" data-slide="0"></span>
-                        <span class="dot" data-slide="1"></span>
-                        <span class="dot" data-slide="2"></span>
-                        <span class="dot" data-slide="3"></span>
-                        <span class="dot" data-slide="4"></span>
-                        <span class="dot" data-slide="5"></span>
-                    </div>
-                    <button class="slide-control-btn next" aria-label="Следующий слайд"><i data-lucide="chevron-right"></i></button>
+                    <span>КУРСК</span>
                 </div>
             </div>
 
-            <a href="#about" class="scroll-down-arrow" aria-label="Листать вниз">
-                <span class="arrow-dot"></span>
-                <i data-lucide="arrow-down" class="arrow-icon"></i>
-            </a>
+            <!-- Fade Gradient Divider at the bottom of Hero -->
+            <div class="hero-gradient-overlay"></div>
         </section>
 
-        <!-- About Section (Olga Belyaeva & Studio) -->
-        <section id="about" class="about-section section-padding">
+        <!-- About Section (LIGHT) -->
+        <section id="about" class="about-section section-padding light-theme" style="background-color: #ffffff; padding-top: 60px;">
+            
             <div class="container">
-                <div class="about-grid">
+                <!-- Section Header (Centered) -->
+                <div class="section-header-center" style="margin-bottom: 60px;">
+                    <span class="section-tag">Праздничное агентство</span>
+                    <h2 class="section-title" style="margin-bottom: 10px;">Very Well</h2>
+                    <p class="section-subtitle" style="font-family: var(--font-serif); font-size: 1.25rem; font-style: italic; color: var(--primary); max-width: 800px; margin: 15px auto 0 auto; line-height: 1.4;">
+                        Ваш идеальный праздник от идеи до воплощения!
+                    </p>
+                </div>
+
+                <div class="about-grid" style="align-items: center;">
                     
                     <!-- Portrait Side -->
-                    <div class="about-image-wrapper reveal-slide-left">
-                        <div class="image-frame-gold">
-                            <img src="assets/images/about_logo.webp" alt="Праздничное Агентство Very Well" class="about-portrait" style="object-fit: contain; background-color: #ffffff; padding: 40px;" width="420" height="420">
+                    <div class="about-image-wrapper reveal-slide-left" style="position: relative; display: flex; justify-content: center; align-items: center;">
+                        <!-- Circular Floral Wreath -->
+                        <img src="/assets/images/wedding/image 4.webp" class="about-wreath" alt="" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 610px; height: 610px; object-fit: contain; z-index: 1; pointer-events: none; max-width: none !important;">
+                        
+                        <div class="image-frame-gold" style="position: relative; z-index: 2; padding: 15px; background-color: #ffffff;">
+                            <img src="/assets/images/about.webp" alt="Праздничное Агентство Very Well" class="about-portrait" width="420" height="420">
                         </div>
-                        <div class="experience-card glass-panel">
+
+                        <div class="experience-card glass-panel" style="position: absolute; bottom: -30px; right: -30px; padding: 25px 35px; text-align: center; border: 1px solid var(--primary); z-index: 3; background-color: #ffffff;">
                             <span class="number">5+</span>
                             <span class="text">лет создаем<br>праздники</span>
                         </div>
@@ -173,38 +72,41 @@
 
                     <!-- Description Side -->
                     <div class="about-text reveal-slide-right">
-                        <span class="section-tag">Праздничное агентство</span>
-                        <h2 class="section-title">Very Well</h2>
-                        <span class="designer-title">Ваш идеальный праздник от идеи до воплощения!</span>
-                        
                         <div class="about-bio">
                             <p class="quote">
                                 Мы предлагаем организацию и оформление вашего торжества «под ключ». Наша главная задача — сделать ваш праздник незабываемым!
                             </p>
                             <p>
-                                Наши профессиональные дизайнеры и декораторы ориентируются на современные тенденции в event-индустрии, где красота и актуальный стиль играют ведущую роль, и всегда стремятся наиболее полно удовлетворить пожелания клиентов, отразить их индивидуальность и создать неповторимый стиль торжества — будь то свадьба, юбилей или корпоратив.
+                                Мы создаём оформление событий под ключ — от первой идеи до финальной детали на площадке. Продумываем концепцию, флористику, декор, цветовую палитру и атмосферу, чтобы праздник выглядел цельно, стильно и отражал именно вашу историю.
                             </p>
                             <p>
-                                Мы берём на себя ваши заботы: ведущий и ведение свадьбы, DJ, координаторы, полиграфия, флористика, оформление интерьеров, фотосессий, свадебный декор, оформление выездной регистрации, кавер-группа, романтический вечер — мы работаем с любыми заказами, исходя из ваших пожеланий и финансовых возможностей.
+                                Берём на себя визуальную часть и организационные заботы: оформление зала, выездную регистрацию, фотозоны, полиграфию, свет, флористику и координацию подрядчиков. Вам остаётся наслаждаться подготовкой и ждать день, который будет выглядеть именно так, как вы мечтали.
                             </p>
                         </div>
+
 
                         <!-- Statistics/Values -->
                         <div class="values-grid">
                             <div class="value-item">
                                 <div class="value-icon"><i data-lucide="sparkles"></i></div>
-                                <h4>Индивидуальность</h4>
-                                <p>Не работаем по шаблонам. Каждая концепция пишется с чистого листа.</p>
+                                <div class="value-content">
+                                    <h4>Индивидуальность</h4>
+                                    <p>Создаём концепцию под вашу пару, площадку и настроение события.</p>
+                                </div>
                             </div>
                             <div class="value-item">
                                 <div class="value-icon"><i data-lucide="heart"></i></div>
-                                <h4>Доверие</h4>
-                                <p>Нам доверяют свои самые важные праздники уже более 5 лет.</p>
+                                <div class="value-content">
+                                    <h4>Доверие</h4>
+                                    <p>Более 5 лет оформляем свадьбы и события, где важна каждая деталь.</p>
+                                </div>
                             </div>
                             <div class="value-item">
                                 <div class="value-icon"><i data-lucide="gem"></i></div>
-                                <h4>Под ключ</h4>
-                                <p>Организуем ваш праздник под ключ от 30&nbsp;000&nbsp;₽.</p>
+                                <div class="value-content">
+                                    <h4>Под ключ</h4>
+                                    <p>Берём на себя декор, флористику, монтаж и координацию в день события.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -213,379 +115,202 @@
             </div>
         </section>
 
-        <!-- Portfolio Gallery Section (17 Photos) -->
-        <section id="portfolio" class="portfolio-section section-padding dark-theme">
+
+
+        <!-- Portfolio Preview Section (LIGHT) -->
+        <section id="portfolio" class="portfolio-section section-padding light-theme" style="background-color: #F9FDF6;">
             <div class="container">
                 <div class="section-header-center">
-                    <span class="section-tag gold">Наше портфолио</span>
-                    <h2 class="section-title text-white">Галерея воплощенных чувств</h2>
-                    <p class="section-subtitle">
-                        Каждый кадр — это реальная история любви, оформленная нашей командой. 
-                        Нажмите на фото, чтобы рассмотреть детали.
-                    </p>
+                    <span class="section-tag">Портфолио</span>
+                    <h2 class="section-title">Атмосфера ваших чувств</h2>
+                    <p class="section-subtitle">Каждая свадьба — уникальная история. Мы бережно создаем концепции и превращаем мечты в осязаемую красоту.</p>
                 </div>
-                <!-- Portfolio Grid Container with Nav Arrows -->
                 <div class="portfolio-preview-grid reveal-fade-in delay-1">
-                    <!-- Item 1 (Classic -> preview) -->
-                    <div class="gallery-item classic" data-src="assets/images/portfolio/preview/3ibnF-ocr31osg7khy0ySW-rvndnjYMi5VWI42AgMuDLhgRC8oMJD4N8MQKW6d6vxXmfqcmJl0dmRiabbC9Aao-W.webp">
+                    <!-- Item 1: Column 1, Top (Bouquet on chair) -->
+                    <div class="gallery-item details" data-src="/assets/images/portfolio/prezidium/decor_21.webp">
                         <div class="gallery-img-container">
-                            <img src="assets/images/portfolio/preview/3ibnF-ocr31osg7khy0ySW-rvndnjYMi5VWI42AgMuDLhgRC8oMJD4N8MQKW6d6vxXmfqcmJl0dmRiabbC9Aao-W.webp" alt="Эксклюзивное оформление президиума с неоновой графикой и утопающей в цветах зоной молодых" loading="lazy">
+                            <img src="/assets/images/portfolio/prezidium/decor_21.webp" alt="Изысканный свадебный букет невесты на винтажном стуле" loading="lazy">
                             <div class="gallery-overlay">
                                 <div class="gallery-info">
-                                    <span class="category">РОСКОШНЫЙ ЛОФТ</span>
-                                    <h3>Эксклюзивное оформление президиума с неоновой графикой и утопающей в цветах зоной молодых</h3>
+                                    <span class="category">ДЕТАЛИ</span>
+                                    <h3>Изысканный свадебный букет невесты на винтажном стуле</h3>
                                 </div>
                                 <span class="zoom-icon"><i data-lucide="maximize-2"></i></span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Item 2 (Modern -> preview) -->
-                    <div class="gallery-item modern" data-src="assets/images/portfolio/preview/CoQGZ825-p3idCK36eh7KkLB3InGus7a119zBn9zJscsmKiv6Bfv2leo2TReUM6-tAvj2Rl7PMUKrBfraL1ZLQDq.webp">
+                    <!-- Item 2: Column 1, Bottom (Bride holding bouquet) -->
+                    <div class="gallery-item classic" data-src="/assets/images/portfolio/zal/decor_8.webp">
                         <div class="gallery-img-container">
-                            <img src="assets/images/portfolio/preview/CoQGZ825-p3idCK36eh7KkLB3InGus7a119zBn9zJscsmKiv6Bfv2leo2TReUM6-tAvj2Rl7PMUKrBfraL1ZLQDq.webp" alt="Монументальная резная арка на глянцевом подиуме для незабываемой церемонии" loading="lazy">
+                            <img src="/assets/images/portfolio/zal/decor_8.webp" alt="Нежный букет невесты с эвкалиптом в руках" loading="lazy">
                             <div class="gallery-overlay">
                                 <div class="gallery-info">
-                                    <span class="category">ИЗЫСКАННАЯ ВЫЕЗДНАЯ</span>
-                                    <h3>Монументальная резная арка на глянцевом подиуме для незабываемой церемонии</h3>
+                                    <span class="category">НЕВЕСТА</span>
+                                    <h3>Нежный букет невесты с эвкалиптом в руках</h3>
                                 </div>
                                 <span class="zoom-icon"><i data-lucide="maximize-2"></i></span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Item 3 (Boho -> preview) -->
-                    <div class="gallery-item boho" data-src="assets/images/portfolio/preview/ZQIfyJv3_4h8s_GM4nirol4vscnhjDI3VsaQ6-h9wPtqCoadKFDF9TFDFPfQtfLZ0eZXCa-fFsBt1ifiKPGfa22l.webp">
+                    <!-- Item 3: Column 2, Top (Hand holding bouquet) -->
+                    <div class="gallery-item modern" data-src="/assets/images/portfolio/arki/CoQGZ825-p3idCK36eh7KkLB3InGus7a119zBn9zJscsmKiv6Bfv2leo2TReUM6-tAvj2Rl7PMUKrBfraL1ZLQDq.webp">
                         <div class="gallery-img-container">
-                            <img src="assets/images/portfolio/preview/ZQIfyJv3_4h8s_GM4nirol4vscnhjDI3VsaQ6-h9wPtqCoadKFDF9TFDFPfQtfLZ0eZXCa-fFsBt1ifiKPGfa22l.webp" alt="Высокие дизайнерские канделябры со струящимися нитями и пышной премиум-флористикой" loading="lazy">
+                            <img src="/assets/images/portfolio/arki/CoQGZ825-p3idCK36eh7KkLB3InGus7a119zBn9zJscsmKiv6Bfv2leo2TReUM6-tAvj2Rl7PMUKrBfraL1ZLQDq.webp" alt="Детали свадебного декора и флористики" loading="lazy">
                             <div class="gallery-overlay">
                                 <div class="gallery-info">
-                                    <span class="category">ХРУСТАЛЬНЫЙ БЛЕСК</span>
-                                    <h3>Высокие дизайнерские канделябры со струящимися нитями и пышной премиум-флористикой</h3>
+                                    <span class="category">ДЕКОР СТОЛА</span>
+                                    <h3>Детали свадебного декора и флористики</h3>
                                 </div>
                                 <span class="zoom-icon"><i data-lucide="maximize-2"></i></span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Item 4 (Details -> preview) -->
-                    <div class="gallery-item details" data-src="assets/images/portfolio/preview/decor_21.webp">
+                    <!-- Item 4: Column 2, Bottom (Tall centerpiece) -->
+                    <div class="gallery-item boho" data-src="/assets/images/portfolio/zal/ZQIfyJv3_4h8s_GM4nirol4vscnhjDI3VsaQ6-h9wPtqCoadKFDF9TFDFPfQtfLZ0eZXCa-fFsBt1ifiKPGfa22l.webp">
                         <div class="gallery-img-container">
-                            <img src="assets/images/portfolio/preview/decor_21.webp" alt="Масштабный световой президиум со сложной многоуровневой подсветкой и интерьерным текстилем" loading="lazy">
+                            <img src="/assets/images/portfolio/zal/ZQIfyJv3_4h8s_GM4nirol4vscnhjDI3VsaQ6-h9wPtqCoadKFDF9TFDFPfQtfLZ0eZXCa-fFsBt1ifiKPGfa22l.webp" alt="Высокая настольная цветочная композиция" loading="lazy">
                             <div class="gallery-overlay">
                                 <div class="gallery-info">
-                                    <span class="category">ТЕПЛОЕ СВЕЧЕНИЕ</span>
-                                    <h3>Масштабный световой президиум со сложной многоуровневой подсветкой и интерьерным текстилем</h3>
+                                    <span class="category">ФЛОРИСТИКА</span>
+                                    <h3>Высокая настольная цветочная композиция</h3>
                                 </div>
                                 <span class="zoom-icon"><i data-lucide="maximize-2"></i></span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Item 5 (Classic -> preview) -->
-                    <div class="gallery-item classic" data-src="assets/images/portfolio/preview/decor_3.webp">
+                    <!-- Item 5: Column 3, Top (Round table) -->
+                    <div class="gallery-item classic" data-src="/assets/images/portfolio/prezidium/3ibnF-ocr31osg7khy0ySW-rvndnjYMi5VWI42AgMuDLhgRC8oMJD4N8MQKW6d6vxXmfqcmJl0dmRiabbC9Aao-W.webp">
                         <div class="gallery-img-container">
-                            <img src="assets/images/portfolio/preview/decor_3.webp" alt="Воздушная парковая арка с каскадной белоснежной флористикой и хрустальным декором" loading="lazy">
+                            <img src="/assets/images/portfolio/prezidium/3ibnF-ocr31osg7khy0ySW-rvndnjYMi5VWI42AgMuDLhgRC8oMJD4N8MQKW6d6vxXmfqcmJl0dmRiabbC9Aao-W.webp" alt="Оформление круглого гостевого стола с яркой флористикой" loading="lazy">
                             <div class="gallery-overlay">
                                 <div class="gallery-info">
-                                    <span class="category">ГРАФИЧНЫЙ ЭКО-СТИЛЬ</span>
-                                    <h3>Воздушная парковая арка с каскадной белоснежной флористикой и хрустальным декором</h3>
+                                    <span class="category">СЕРВИРОВКА</span>
+                                    <h3>Оформление круглого гостевого стола с яркой флористикой</h3>
                                 </div>
                                 <span class="zoom-icon"><i data-lucide="maximize-2"></i></span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Item 6 (Modern -> preview) -->
-                    <div class="gallery-item modern" data-src="assets/images/portfolio/preview/decor_8.webp">
+                    <!-- Item 6: Column 3, Bottom (Close up of table flowers) -->
+                    <div class="gallery-item classic" data-src="/assets/images/portfolio/prezidium/decor_25.webp">
                         <div class="gallery-img-container">
-                            <img src="assets/images/portfolio/preview/decor_8.webp" alt="Элегантная сервировка гостевых столов с концептуальными сухоцветами, свечами и полиграфией" loading="lazy">
+                            <img src="/assets/images/portfolio/prezidium/decor_25.webp" alt="Элегантная сервировка гостевых столов со свечами и цветами" loading="lazy">
                             <div class="gallery-overlay">
                                 <div class="gallery-info">
-                                    <span class="category">ЭСТЕТИКА БОХО</span>
-                                    <h3>Элегантная сервировка гостевых столов с концептуальными сухоцветами, свечами и полиграфией</h3>
+                                    <span class="category">ДЕТАЛИ СЕРВИРОВКИ</span>
+                                    <h3>Элегантная сервировка гостевых столов со свечами и цветами</h3>
                                 </div>
                                 <span class="zoom-icon"><i data-lucide="maximize-2"></i></span>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Item 7: Column 3, Bottom 2 (Airy park arch) -->
+                    <div class="gallery-item classic" data-src="/assets/images/portfolio/arki/decor_3.webp">
+                        <div class="gallery-img-container">
+                            <img src="/assets/images/portfolio/arki/decor_3.webp" alt="Воздушная парковая арка с белоснежной флористикой" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <span class="category">АРКА</span>
+                                    <h3>Воздушная парковая арка с белоснежной флористикой</h3>
+                                </div>
+                                <span class="zoom-icon"><i data-lucide="maximize-2"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Corner Floral Accents -->
+                    <img src="/assets/images/wedding/image 5.webp" class="gallery-corner gallery-corner-tl" alt="">
+                    <img src="/assets/images/wedding/image 5-1.webp" class="gallery-corner gallery-corner-br" alt="">
                 </div>
                 <div class="portfolio-cta reveal-fade-in delay-2">
-                    <a href="/portfolio" class="btn btn-primary">Смотреть все работы <i data-lucide="arrow-right"></i></a>
+                    <a href="portfolio.html" class="btn btn-primary">Смотреть все работы <i data-lucide="arrow-right"></i></a>
                 </div>
             </div>
+
         </section>
 
-        <!-- Interactive Style & Budget Quiz -->
-        <section id="quiz" class="quiz-section section-padding">
+        <!-- Process Section (LIGHT) -->
+        <section id="process" class="process-section section-padding light-theme" style="background-color: #F7F4EF; border-top: 1px solid rgba(156, 133, 96, 0.15);">
             <div class="container">
-                <div class="quiz-grid">
+                <!-- Section Header (Centered) -->
+                <div class="section-header-center" style="margin-bottom: 50px;">
+                    <span class="section-tag">Этапы</span>
+                    <h2 class="section-title">Как проходит работа</h2>
+                    <p class="section-subtitle">Пошаговый процесс от первого знакомства до безупречной реализации в день свадьбы.</p>
+                </div>
+
+                <div class="process-editorial-layout">
                     
-                    <!-- Text side -->
-                    <div class="quiz-intro reveal-slide-left">
-                        <span class="section-tag">Интерактивный тест</span>
-                        <h2 class="section-title">Каким будет стиль вашей идеальной свадьбы?</h2>
-                        <p class="quiz-lead">
-                            Пройдите этот короткий тест из 5 вопросов. Мы проанализируем ваши ответы, подберем подходящую цветовую гамму, стиль оформления и рассчитаем ориентировочный бюджет декора.
-                        </p>
-                        
-                        <div class="quiz-benefits">
-                            <div class="benefit-card">
-                                <span class="icon"><i data-lucide="palette"></i></span>
-                                <div>
-                                    <h5>Индивидуальный подбор стиля</h5>
-                                    <p>К каждой свадьбе мы относимся как к уникальной истории: разрабатываем авторский декор, никогда не повторяемся и бережно учитываем ваши пожелания.</p>
+                    <!-- Left Column: Timeline -->
+                    <div class="process-timeline-col reveal-slide-left">
+                        <div class="process-timeline-list">
+                            <!-- Thin vertical line -->
+                            <div class="process-vertical-line"></div>
+
+                            <!-- Step 1 -->
+                            <div class="process-timeline-item">
+                                <div class="process-timeline-number">01</div>
+                                <div class="process-timeline-content">
+                                    <h3 class="process-timeline-title">Знакомство</h3>
+                                    <p class="process-timeline-description">Обсуждаем дату, площадку, стиль свадьбы и ваши пожелания.</p>
                                 </div>
                             </div>
-                            <div class="benefit-card">
-                                <span class="icon"><i data-lucide="calculator"></i></span>
-                                <div>
-                                    <h5>Быстрый расчет сметы</h5>
-                                    <p>Ориентировочная стоимость материалов и работы под ваш масштаб.</p>
+
+                            <!-- Step 2 -->
+                            <div class="process-timeline-item">
+                                <div class="process-timeline-number">02</div>
+                                <div class="process-timeline-content">
+                                    <h3 class="process-timeline-title">Концепция и смета</h3>
+                                    <p class="process-timeline-description">Подбираем оформление, флористику и готовим предварительный расчёт.</p>
                                 </div>
                             </div>
+
+                            <!-- Step 3 -->
+                            <div class="process-timeline-item">
+                                <div class="process-timeline-number">03</div>
+                                <div class="process-timeline-content">
+                                    <h3 class="process-timeline-title">Подготовка</h3>
+                                    <p class="process-timeline-description">Согласуем детали, материалы, подрядчиков и тайминг.</p>
+                                </div>
+                            </div>
+
+                            <!-- Step 4 -->
+                            <div class="process-timeline-item">
+                                <div class="process-timeline-number">04</div>
+                                <div class="process-timeline-content">
+                                    <h3 class="process-timeline-title">Монтаж в день события</h3>
+                                    <p class="process-timeline-description">Оформляем площадку и контролируем результат до начала праздника.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA Block under timeline -->
+                        <div class="process-cta-block">
+                            <p class="process-cta-text">Хотите понять, с чего начать?</p>
+                            <a href="#contacts" class="btn btn-primary">Обсудить оформление</a>
                         </div>
                     </div>
 
-                    <!-- Interactive Quiz Wizard Box -->
-                    <div class="quiz-box glass-panel reveal-slide-right">
-                        <div class="quiz-progress-bar">
-                            <div class="progress-fill" style="width: 25%;"></div>
+                    <!-- Right Column: Atmospheric Photo -->
+                    <div class="process-image-col reveal-slide-right">
+                        <!-- Decorative watercolor branch behind photo -->
+                        <img src="/assets/images/decor-branch.svg" class="process-decor-branch" alt="" loading="lazy">
+                        <div class="process-image-container">
+                            <img src="/assets/images/portfolio/arki/decor_3.webp" alt="Свадебная церемония" class="process-editorial-image" loading="lazy">
+                            <div class="process-photo-badge">
+                                <i data-lucide="sparkles"></i>
+                                <span>Монтаж в день события</span>
+                            </div>
+                            <div class="process-detail-photo">
+                                <img src="/assets/images/portfolio/prezidium/decor_25.webp" alt="Детали сервировки и свадебного декора" loading="lazy">
+                            </div>
                         </div>
-                        <div class="quiz-steps-indicators">
-                            <span class="step-num active">1</span>
-                            <span class="step-num">2</span>
-                            <span class="step-num">3</span>
-                            <span class="step-num">4</span>
-                            <span class="step-num">5</span>
-                            <span class="step-num"><i data-lucide="award"></i></span>
-                        </div>
-
-                        <!-- Quiz Steps Form -->
-                        <form id="wedding-quiz-form">
-                            
-                            <!-- Step 1: Location -->
-                            <div class="quiz-step active" data-step="1">
-                                <h3 class="quiz-question">1. Какую локацию вы планируете для торжества?</h3>
-                                <div class="quiz-options-grid">
-                                    <label class="quiz-option">
-                                        <input type="radio" name="location" value="banquet-hall" checked>
-                                        <span class="option-card">
-                                            <span class="option-icon"><i data-lucide="castle"></i></span>
-                                            <span class="option-title">Классический банкетный зал</span>
-                                        </span>
-                                    </label>
-                                    <label class="quiz-option">
-                                        <input type="radio" name="location" value="nature">
-                                        <span class="option-card">
-                                            <span class="option-icon"><i data-lucide="trees"></i></span>
-                                            <span class="option-title">Выездная регистрация на природе</span>
-                                        </span>
-                                    </label>
-                                    <label class="quiz-option">
-                                        <input type="radio" name="location" value="loft">
-                                        <span class="option-card">
-                                            <span class="option-icon"><i data-lucide="warehouse"></i></span>
-                                            <span class="option-title">Индустриальный лофт / Шатер</span>
-                                        </span>
-                                    </label>
-                                    <label class="quiz-option">
-                                        <input type="radio" name="location" value="restaurant">
-                                        <span class="option-card">
-                                            <span class="option-icon"><i data-lucide="glass-water"></i></span>
-                                            <span class="option-title">Камерный ресторан / Терраса</span>
-                                        </span>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <!-- Step 2: Color Palette -->
-                            <div class="quiz-step" data-step="2">
-                                <h3 class="quiz-question">2. Какая цветовая гамма вам ближе всего?</h3>
-                                <div class="quiz-options-grid">
-                                    <label class="quiz-option">
-                                        <input type="radio" name="colors" value="classic-white">
-                                        <span class="option-card">
-                                            <span class="color-preview white-gold"></span>
-                                            <span class="option-title">Белоснежная с золотом</span>
-                                        </span>
-                                    </label>
-                                    <label class="quiz-option">
-                                        <input type="radio" name="colors" value="pastels" checked>
-                                        <span class="option-card">
-                                            <span class="color-preview pastel-rose"></span>
-                                            <span class="option-title">Пыльно-розовые и кремовые тона</span>
-                                        </span>
-                                    </label>
-                                    <label class="quiz-option">
-                                        <input type="radio" name="colors" value="natural-green">
-                                        <span class="option-card">
-                                            <span class="color-preview green-wood"></span>
-                                            <span class="option-title">Зелень, эвкалипт, дерево</span>
-                                        </span>
-                                    </label>
-                                    <label class="quiz-option">
-                                        <input type="radio" name="colors" value="bold-dark">
-                                        <span class="option-card">
-                                            <span class="color-preview deep-emerald"></span>
-                                            <span class="option-title">Глубокие темные акценты</span>
-                                        </span>
-                                    </label>
-                                    <label class="quiz-option">
-                                        <input type="radio" name="colors" value="white-crystal">
-                                        <span class="option-card">
-                                            <span class="color-preview white-crystal"></span>
-                                            <span class="option-title">Белый хрусталь</span>
-                                        </span>
-                                    </label>
-                                    <label class="quiz-option">
-                                        <input type="radio" name="colors" value="other-color">
-                                        <span class="option-card">
-                                            <span class="color-preview rgb-palette"></span>
-                                            <span class="option-title">Другое</span>
-                                        </span>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <!-- Step 3: Guests count -->
-                            <div class="quiz-step" data-step="3">
-                                <h3 class="quiz-question">3. Какое количество гостей планируется на свадьбе?</h3>
-                                <div class="quiz-options-grid options-horizontal">
-                                    <label class="quiz-option">
-                                        <input type="radio" name="guests" value="lite" checked>
-                                        <span class="option-card">
-                                            <span class="option-title">до 30 человек (Камерная)</span>
-                                        </span>
-                                    </label>
-                                    <label class="quiz-option">
-                                        <input type="radio" name="guests" value="medium">
-                                        <span class="option-card">
-                                            <span class="option-title">30 – 70 человек (Стандарт)</span>
-                                        </span>
-                                    </label>
-                                    <label class="quiz-option">
-                                        <input type="radio" name="guests" value="large">
-                                        <span class="option-card">
-                                            <span class="option-title">70 – 120 человек (Масштабная)</span>
-                                        </span>
-                                    </label>
-                                    <label class="quiz-option">
-                                        <input type="radio" name="guests" value="royal">
-                                        <span class="option-card">
-                                            <span class="option-title">более 120 человек (Грандиозная)</span>
-                                        </span>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <!-- Step 4: Vibe/Aesthetics -->
-                            <div class="quiz-step" data-step="4">
-                                <h3 class="quiz-question">4. Какую атмосферу вы хотите создать?</h3>
-                                <div class="quiz-options-grid">
-                                    <label class="quiz-option">
-                                        <input type="radio" name="vibe" value="classic" checked>
-                                        <span class="option-card">
-                                            <span class="option-icon"><i data-lucide="crown"></i></span>
-                                            <span class="option-title">Дворцовое величие и шик</span>
-                                        </span>
-                                    </label>
-                                    <label class="quiz-option">
-                                        <input type="radio" name="vibe" value="modern">
-                                        <span class="option-card">
-                                            <span class="option-icon"><i data-lucide="boxes"></i></span>
-                                            <span class="option-title">Стильный урбан-минимализм</span>
-                                        </span>
-                                    </label>
-                                    <label class="quiz-option">
-                                        <input type="radio" name="vibe" value="other-vibe">
-                                        <span class="option-card">
-                                            <span class="option-icon"><i data-lucide="help-circle"></i></span>
-                                            <span class="option-title">Другое</span>
-                                        </span>
-                                    </label>
-                                    <label class="quiz-option">
-                                        <input type="radio" name="vibe" value="cozy">
-                                        <span class="option-card">
-                                            <span class="option-icon"><i data-lucide="home"></i></span>
-                                            <span class="option-title">Уютный семейный ужин при свечах</span>
-                                        </span>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <!-- Step 5: Event Date -->
-                            <div class="quiz-step" data-step="5">
-                                <h3 class="quiz-question">5. Когда планируется ваше торжество?</h3>
-                                <div class="quiz-options-grid options-horizontal" style="grid-template-columns: 1fr; max-width: 400px; margin: 0 auto;">
-                                    <div class="form-group" style="text-align: left;">
-                                        <label for="quiz-date" style="display: block; margin-bottom: 8px;">Выберите дату:</label>
-                                        <input type="date" name="quiz_date" id="quiz-date" required>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Step 6: Result screen -->
-                            <div class="quiz-step quiz-result-step" data-step="6">
-                                <div class="result-celebration"><i data-lucide="check-circle-2"></i></div>
-                                <h3>Ваша концепция готова!</h3>
-                                <div class="style-recommendation-box glass-panel">
-                                    <p class="rec-label">Рекомендуемый стиль оформления:</p>
-                                    <h4 class="recommended-style-name">Изысканная классика</h4>
-                                    <p class="recommended-style-desc">
-                                        Вашему выбору соответствует элегантный декор с обилием цветов, канделябрами и мягким свечением свечей.
-                                    </p>
-                                    <div class="budget-estimation">
-                                        <span>Предварительный бюджет декора:</span>
-                                        <strong class="estimated-price">от 250 000 руб.</strong>
-                                    </div>
-                                </div>
-
-                                <div class="quiz-contact-fields">
-                                    <p class="fields-subtitle">Введите ваши контакты, чтобы получить персональную презентацию и детальный расчет сметы в Telegram или WhatsApp:</p>
-                                    <div class="form-row-2">
-                                        <div class="form-group">
-                                            <input type="text" id="quiz-name" placeholder="Ваше имя" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="tel" id="quiz-phone" placeholder="+7 (999) 000-00-00" required>
-                                        </div>
-                                    </div>
-                                    <div class="form-group" style="margin-top: 15px;">
-                                        <label style="color: var(--text-muted-light);">Удобный мессенджер</label>
-                                        <div class="contact-pref-group">
-                                            <label class="pref-option">
-                                                <input type="radio" name="quiz-contact-preference" value="whatsapp" checked>
-                                                <span class="pref-card">WhatsApp</span>
-                                            </label>
-                                            <label class="pref-option">
-                                                <input type="radio" name="quiz-contact-preference" value="telegram">
-                                                <span class="pref-card">Telegram</span>
-                                            </label>
-                                            <label class="pref-option">
-                                                <input type="radio" name="quiz-contact-preference" value="max">
-                                                <span class="pref-card">MAX</span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="form-group checkbox-group" style="margin-top: 20px;">
-                                        <label class="checkbox-label">
-                                            <input type="checkbox" checked required>
-                                            <span class="checkbox-custom"></span>
-                                            <span class="checkbox-text">Я соглашаюсь на обработку персональных данных</span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Navigation buttons inside quiz box -->
-                            <div class="quiz-navigation">
-                                <button type="button" class="btn btn-outline btn-sm quiz-nav-btn prev-step" style="display: none;"><i data-lucide="chevron-left"></i> Назад</button>
-                                <button type="button" class="btn btn-primary btn-sm quiz-nav-btn next-step">Далее <i data-lucide="chevron-right"></i></button>
-                                <button type="submit" class="btn btn-primary btn-sm quiz-nav-btn submit-quiz" style="display: none;">Получить расчет сметы <i data-lucide="send"></i></button>
-                            </div>
-
-                        </form>
                     </div>
 
                 </div>
@@ -593,107 +318,209 @@
         </section>
 
         <!-- Services & Pricing Section -->
-        <section id="prices" class="pricing-section section-padding dark-theme">
-            <div class="container">
+        <section id="homepage-pricing" class="pricing-section section-padding dark-theme" style="background-color: #171717; position: relative;">
+            <div class="container" style="position: relative;">
+                <!-- Decorative watercolor branches (static backgrounds behind cards) -->
+                <img src="/assets/images/wedding/image 15-1.webp" class="pricing-decor-left" alt="">
+                <img src="/assets/images/wedding/image 15.webp" class="pricing-decor-right" alt="">
+
                 <div class="section-header-center">
-                    <span class="section-tag gold">Услуги и пакеты</span>
-                    <h2 class="section-title text-white">Стоимость вашего вдохновения</h2>
+                    <span class="section-tag gold" style="color: #9C8560 !important; opacity: 1; font-weight: 600;">Услуги и цены</span>
+                    <h2 class="section-title">Стоимость свадебного оформления</h2>
                     <p class="section-subtitle">
-                        Мы предлагаем понятную тарификацию, которая адаптируется под ваши пожелания. 
-                        В стоимость уже входит работа всей команды организаторов и декораторов.
+                        Выберите формат декора — от камерной регистрации до свадьбы под ключ. Каждый пакет можно адаптировать под вашу площадку, стиль и бюджет.
                     </p>
                 </div>
 
                 <div class="pricing-grid">
-                    
-                    <!-- Card 1: Chamber -->
-                    <div class="pricing-card reveal-slide-up">
+                    <!-- Card 1 -->
+                    <div class="pricing-card">
                         <div class="card-header">
-                            <span class="package-name">LITE / Камерный</span>
+                            <span class="package-name">Выездная регистрация</span>
                             <div class="price-box">
-                                <span class="price-val range">30&nbsp;000 – 70&nbsp;000 <span class="currency">₽</span></span>
+                                <span class="price-val range">30&nbsp;000 – 120&nbsp;000 <span class="currency">₽</span></span>
                             </div>
-                            <p class="card-desc">Идеальное решение для уютного свадебного вечера в кругу самых близких (до 30 гостей).</p>
+                            <p class="card-desc">Оформление площадки для церемонии на открытом воздухе или в банкетном зале.</p>
                         </div>
                         <div class="card-body">
                             <ul class="features-list">
-                                <li><i data-lucide="check"></i> Разработка базовой концепции</li>
-                                <li><i data-lucide="check"></i> Оформление президиума (стол пары)</li>
-                                <li><i data-lucide="check"></i> Задник президиума с подсветкой</li>
-                                <li><i data-lucide="check"></i> Букет невесты и бутоньерка</li>
-                                <li><i data-lucide="check"></i> Монтаж и демонтаж декора</li>
+                                <li><i data-lucide="check"></i> Индивидуальная свадебная арка на выбор</li>
+                                <li><i data-lucide="check"></i> Оформление дорожки к арке (лепестки, дорожка)</li>
+                                <li><i data-lucide="check"></i> Аренда стульев для гостей с оформлением</li>
+                                <li><i data-lucide="check"></i> Столик для росписи с декоративными деталями</li>
+                                <li><i data-lucide="check"></i> Пышная флористика: живые цветы или премиум-декор</li>
+                                <li><i data-lucide="check"></i> Зона приветствия (welcome) и схема рассадки гостей</li>
                             </ul>
                         </div>
                         <div class="card-footer">
-                            <a href="#contacts" class="btn btn-outline btn-block select-package" data-package="Камерный (LITE)">Заказать пакет</a>
+                            <a href="uslugi/vyezdnaya-registraciya.html" class="btn btn-outline btn-block">Узнать подробнее</a>
                         </div>
                     </div>
 
-                    <!-- Card 2: Premium (Featured) -->
-                    <div class="pricing-card featured reveal-slide-up delay-1">
-                        <div class="featured-badge">Рекомендуем</div>
+                    <!-- Card 2: Svadba pod klyuch (Featured) -->
+                    <div class="pricing-card featured">
+                        <div class="featured-badge" style="background: var(--gold-gradient); color: #FFFFFF;">Рекомендуем</div>
                         <div class="card-header">
-                            <span class="package-name">VERY WELL PREMIUM</span>
+                            <span class="package-name">Свадьба под ключ</span>
                             <div class="price-box">
-                                <span class="price-val range">100&nbsp;000 – 180&nbsp;000 <span class="currency">₽</span></span>
+                                <span class="price-val range">120&nbsp;000 – 300&nbsp;000 <span class="currency">₽</span></span>
                             </div>
-                            <p class="card-desc">Индивидуальный дизайн-проект под ключ с масштабной фотозоной и выездной регистрацией (до 75 гостей).</p>
+                            <p class="card-desc">Комплексное оформление свадьбы: от разработки концепции и эскизов до флористики и светового декора.</p>
                         </div>
                         <div class="card-body">
                             <ul class="features-list">
-                                <li><i data-lucide="check"></i> Эксклюзивный президиум (живая флористика)</li>
-                                <li><i data-lucide="check"></i> Масштабная зона выездной регистрации</li>
-                                <li><i data-lucide="check"></i> Оформление столов гостей (до 8 шт, премиум посуда)</li>
-                                <li><i data-lucide="check"></i> Индивидуальный план рассадки и полиграфия</li>
-                                <li><i data-lucide="check"></i> Велком-зона / Фотозона с подсветкой</li>
-                                <li><i data-lucide="check"></i> Букет невесты, дублер и бутоньерки</li>
+                                <li><i data-lucide="check"></i> Разработка авторской концепции и палитры</li>
+                                <li><i data-lucide="check"></i> Декор президиума молодоженов и гостевых столов</li>
+                                <li><i data-lucide="check"></i> Оформление выездной регистрации и фотозоны</li>
+                                <li><i data-lucide="check"></i> Профессиональное световое оформление торжества</li>
+                                <li><i data-lucide="check"></i> Свадебная флористика, букет невесты и бутоньерка</li>
+                                <li><i data-lucide="check"></i> Монтаж, демонтаж и координация на площадке</li>
                             </ul>
                         </div>
                         <div class="card-footer">
-                            <a href="#contacts" class="btn btn-primary btn-block select-package" data-package="Премиум (VERY WELL PREMIUM)">Заказать пакет</a>
+                            <a href="uslugi/svadba-pod-klyuch.html" class="btn btn-primary btn-block">Обсудить пакет</a>
                         </div>
                     </div>
 
-                    <!-- Card 3: Royal -->
-                    <div class="pricing-card reveal-slide-up delay-2">
+                    <!-- Card 3 -->
+                    <div class="pricing-card">
                         <div class="card-header">
-                            <span class="package-name">ROYAL CUSTOM</span>
+                            <span class="package-name">Оформление зала</span>
                             <div class="price-box">
-                                <span class="price-val range">200&nbsp;000 – 350&nbsp;000 <span class="currency">₽</span></span>
+                                <span class="price-val range">70&nbsp;000 – 150&nbsp;000 <span class="currency">₽</span></span>
                             </div>
-                            <p class="card-desc">Грандиозный декор с изменением геометрии зала, потолочными конструкциями и спецэффектами.</p>
+                            <p class="card-desc">Декор банкетного пространства: президиум, оформление столов гостей, фотозоны и световые инсталляции.</p>
                         </div>
                         <div class="card-body">
                             <ul class="features-list">
-                                <li><i data-lucide="check"></i> Персональный архитектор-декоратор проекта</li>
-                                <li><i data-lucide="check"></i> Подвесные потолочные инсталляции (свет/флористика)</li>
-                                <li><i data-lucide="check"></i> Подиум, сцена и танцпол в общей концепции</li>
-                                <li><i data-lucide="check"></i> Масштабная зона регистрации и интерактивная фотозона</li>
-                                <li><i data-lucide="check"></i> Эксклюзивная флористика (импортные сорта роз)</li>
-                                <li><i data-lucide="check"></i> Полная сервировка дизайнерской посудой</li>
-                                <li><i data-lucide="check"></i> Личный менеджер на площадке 24/7</li>
+                                <li><i data-lucide="check"></i> Декор стола молодоженов (президиума) с цветами</li>
+                                <li><i data-lucide="check"></i> Композиции на гостевых столах (флористика)</li>
+                                <li><i data-lucide="check"></i> Премиальный текстиль: скатерти, салфетки, раннеры</li>
+                                <li><i data-lucide="check"></i> Посуда, свечи и дизайнерские элементы сервировки</li>
+                                <li><i data-lucide="check"></i> Зонирование зала, задник президиума с подсветкой</li>
+                                <li><i data-lucide="check"></i> Световой декор зала, аплайтинг и гирлянды</li>
                             </ul>
                         </div>
                         <div class="card-footer">
-                            <a href="#contacts" class="btn btn-outline btn-block select-package" data-package="Индивидуальный (ROYAL CUSTOM)">Заказать пакет</a>
+                            <a href="uslugi/oformlenie-zala.html" class="btn btn-outline btn-block">Узнать подробнее</a>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
-        <!-- Contacts Section with Form and Map representation -->
-        <section id="contacts" class="contacts-section section-padding">
+
+
+        <!-- Testimonials Section (LIGHT) -->
+        <section id="homepage-reviews" class="reviews-section section-padding light-theme" style="background-color: #FAFAFA; border-top: 1px solid rgba(156, 133, 96, 0.15); overflow: hidden;">
+            <div class="container">
+                <div class="testimonials-container">
+                    
+                    <!-- Left Column: Heading and dots -->
+                    <div class="testimonials-left">
+                        <span class="testimonials-tag">СЛОВА БЛАГОДАРНОСТИ</span>
+                        <h2 class="testimonials-title">Что говорят<br><em>наши пары</em></h2>
+                        <p class="testimonials-note">настоящие истории наших пар</p>
+                        
+                        <div class="testimonials-dots">
+                            <button class="testimonials-dot active" data-slide="0" aria-label="Слайд 1"></button>
+                            <button class="testimonials-dot" data-slide="1" aria-label="Слайд 2"></button>
+                            <button class="testimonials-dot" data-slide="2" aria-label="Слайд 3"></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column: Quote slider and navigation -->
+                    <div class="testimonials-right">
+                        <div class="testimonials-slider">
+                            <div class="testimonials-track">
+                                <!-- Slide 1 -->
+                                <div class="testimonial-slide active" data-index="0">
+                                    <img class="testimonial-photo" src="/assets/images/portfolio/prezidium/decor_21.webp" alt="Свадебный декор для отзыва Марии и Александра" loading="lazy">
+                                    <blockquote class="testimonial-quote">
+                                        «Ольга, спасибо вам огромное за сказку, которую вы создали на нашей свадьбе! Когда мы зашли в зал, у меня перехватило дыхание. Все было настолько изысканно, нежно и продумано до мелочей. Наши гости до сих пор вспоминают невероятные цветочные композиции...»
+                                    </blockquote>
+                                    <div class="testimonial-project-meta">
+                                        <div><strong>Задача:</strong> Классическое оформление в нежных тонах</div>
+                                        <div><strong>Что сделали:</strong> Декор президиума, каскадная флористика, текстиль, свечи и полиграфия</div>
+                                    </div>
+                                    <div class="testimonial-author">
+                                        <div class="testimonial-avatar">МА</div>
+                                        <div class="testimonial-meta">
+                                            <h4 class="testimonial-name">Мария и Александр</h4>
+                                            <span class="testimonial-desc">Ресторан «Гринн» • июль 2025</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Slide 2 -->
+                                <div class="testimonial-slide" data-index="1">
+                                    <img class="testimonial-photo" src="/assets/images/portfolio/zal/decor_8.webp" alt="Свадебный декор для отзыва Екатерины и Дмитрия" loading="lazy">
+                                    <blockquote class="testimonial-quote">
+                                        «Мы очень рады, что выбрали именно Very Well Décor. Ольга тонко почувствовала наше настроение и концепцию свадьбы. Оформление в стиле модерн с элементами неона получилось невероятно стильным и современным, именно то, о чем мы мечтали! Подвесные инсталляции над столом президиума — это шедевр. Спасибо за ваш труд и за то, что все прошло идеально!»
+                                    </blockquote>
+                                    <div class="testimonial-project-meta">
+                                        <div><strong>Задача:</strong> Оформление в стиле модерн с неоновыми элементами</div>
+                                        <div><strong>Что сделали:</strong> Подвесные цветочные инсталляции, неоновый президиум, фотозона</div>
+                                    </div>
+                                    <div class="testimonial-author">
+                                        <div class="testimonial-avatar">ЕД</div>
+                                        <div class="testimonial-meta">
+                                            <h4 class="testimonial-name">Екатерина и Дмитрий</h4>
+                                            <span class="testimonial-desc">Усадьба «Архангельское» • сентябрь 2025</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Slide 3 -->
+                                <div class="testimonial-slide" data-index="2">
+                                    <img class="testimonial-photo" src="/assets/images/portfolio/arki/decor_3.webp" alt="Свадебный декор для отзыва Анны и Сергея" loading="lazy">
+                                    <blockquote class="testimonial-quote">
+                                        «Оформление нашей свадьбы в стиле Бохо-шик превзошло все наши ожидания! Сухоцветы, пампасная трава, ретро-гирлянды и обилие свечей создали такую теплую и уютную атмосферу. Все было так гармонично и эстетично, каждая деталь радовала глаз. Ольга была на связи весь период подготовки и учла все-все пожелания. Огромное спасибо!»
+                                    </blockquote>
+                                    <div class="testimonial-project-meta">
+                                        <div><strong>Задача:</strong> Оформление в стиле бохо-шик</div>
+                                        <div><strong>Что сделали:</strong> Президиум, гостевые столы, фотозона, свечи, сухоцветы</div>
+                                    </div>
+                                    <div class="testimonial-author">
+                                        <div class="testimonial-avatar">АС</div>
+                                        <div class="testimonial-meta">
+                                            <h4 class="testimonial-name">Анна и Сергей</h4>
+                                            <span class="testimonial-desc">Площадка «Белая дача» • август 2025</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Arrows & CTA Link -->
+                        <div class="testimonials-footer-row">
+                            <div class="testimonials-nav">
+                                <button class="testimonial-nav-btn prev" aria-label="Предыдущий отзыв">
+                                    <i data-lucide="arrow-left"></i>
+                                </button>
+                                <button class="testimonial-nav-btn next" aria-label="Следующий отзыв">
+                                    <i data-lucide="arrow-right"></i>
+                                </button>
+                            </div>
+                            <a href="otzyvy.html" class="testimonials-all-link">Читать все отзывы пар <i data-lucide="arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+<!-- Contacts Section (LIGHT) -->
+        <section id="contacts" class="contacts-section section-padding light-theme" style="background-color: #ffffff; border-top: 1px solid rgba(27, 26, 24, 0.05);">
             <div class="container">
                 <div class="contacts-grid">
                     
                     <!-- Info column -->
                     <div class="contacts-info reveal-slide-left">
                         <span class="section-tag">Связаться с нами</span>
-                        <h2 class="section-title">Оформление свадьбы и декор праздников в Курске</h2>
+                        <h2 class="section-title">Расскажите о вашей свадьбе — <span style="font-style: italic;">мы подготовим расчёт</span></h2>
                         <p class="contacts-lead">
-                            Мы готовы встретиться в Курске для личной беседы или созвониться по видеосвязи, если вы находитесь в Москве, Воронеже или любом другом городе.
+                            Оставьте заявку — мы уточним дату, площадку и ваши пожелания, а затем предложим оформление, которое подойдёт по стилю и бюджету.
                         </p>
 
                         <div class="contact-details-list">
@@ -730,8 +557,8 @@
                             <div class="contact-detail-item">
                                 <span class="icon"><i data-lucide="map-pin"></i></span>
                                 <div>
-                                    <span>Мастерская и офис:</span>
-                                    <span class="val text-dark">г. Курск, ул. Ленина, д. 45</span>
+                                    <span>Локация:</span>
+                                    <span class="val text-dark">г. Курск</span>
                                 </div>
                             </div>
                         </div>
@@ -747,12 +574,15 @@
                                 Instagram
                             </a>
                         </div>
+                        <div class="contacts-socials-note" style="font-size: 0.65rem; color: var(--text-muted-dark); opacity: 0.6; margin-top: 8px;">
+                            *все ссылки кликабельные
+                        </div>
                     </div>
 
                     <!-- Form column -->
                     <div class="contacts-form-box glass-panel reveal-slide-right">
-                        <h3 class="form-title">Заказать расчет сметы</h3>
-                        <p class="form-subtitle">Заполните анкету, мы свяжемся с вами в течение 2 часов.</p>
+                        <h3 class="form-title">Получить расчёт оформления</h3>
+                        <p class="form-subtitle">Заполните короткую форму — мы свяжемся с вами и подскажем, с чего начать.</p>
                         
                         <form id="wedding-contact-form">
                             <div class="form-group">
@@ -787,20 +617,20 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="form-package">Желаемый пакет услуг</label>
+                                <label for="form-package">Интересующая услуга</label>
                                 <select id="form-package">
                                     <option value="not-sure">Пока не определились</option>
-                                    <option value="lite">LITE / Камерный (30 000 – 70 000 ₽)</option>
-                                    <option value="premium">VERY WELL PREMIUM (100 000 – 180 000 ₽)</option>
-                                    <option value="royal">ROYAL CUSTOM (200 000 – 350 000 ₽)</option>
+                                    <option value="svadba-pod-klyuch">Свадьба под ключ (от 150 000 ₽)</option>
+                                    <option value="oformlenie-zala">Оформление зала (от 70 000 ₽)</option>
+                                    <option value="vyezdnaya-registraciya">Выездная регистрация (от 50 000 ₽)</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="form-message">Расскажите немного о ваших пожеланиях</label>
-                                <textarea id="form-message" rows="4" placeholder="Какое место проведения планируется? Какая цветовая гамма нравится?"></textarea>
+                                <textarea id="form-message" rows="4" placeholder="Напишите дату, площадку, примерное количество гостей и стиль, который вам близок."></textarea>
                             </div>
                             
-                            <button type="submit" class="btn btn-primary btn-block">Отправить заявку <i data-lucide="arrow-right"></i></button>
+                            <button type="submit" class="btn btn-primary btn-block">Получить расчёт <i data-lucide="arrow-right"></i></button>
                             <p class="form-privacy">Нажимая кнопку, вы соглашаетесь на обработку ваших персональных данных.</p>
                         </form>
                     </div>
@@ -811,128 +641,11 @@
 
     </main>
 
-    <!-- Footer -->
-    <footer class="main-footer">
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <a href="#" class="logo-wrapper">
-                    <img src="assets/images/logo.webp" alt="Very Well Décor" class="footer-logo" width="38" height="38">
-                    <div class="logo-text">
-                        <span class="brand-name text-white">Very Well</span>
-                        <span class="brand-sub gold">DÉCOR STUDIO</span>
-                    </div>
-                </a>
-                <p class="footer-brand-desc">
-                    Изысканное оформление и авторская флористика для особенных свадебных торжеств по всей России.
-                </p>
-            </div>
-            
-            <div class="footer-links">
-                <h4>Разделы</h4>
-                <ul>
-                    <li><a href="#hero">Главная</a></li>
-                    <li><a href="#about">О нас</a></li>
-                    <li><a href="#portfolio">Портфолио</a></li>
-                    <li><a href="#quiz">Подбор стиля</a></li>
-                    <li><a href="#prices">Услуги и Цены</a></li>
-                </ul>
-            </div>
+    {{> footer }}
 
-            <div class="footer-cities">
-                <h4>География работы</h4>
-                <ul>
-                    <li><strong>Курск</strong> — Мастерская и штаб-квартира</li>
-                    <li><strong>Воронеж</strong> — Выездные проекты (2-3 часа пути)</li>
-                    <li><strong>Москва & МО</strong> — Масштабные проекты</li>
-                    <li><strong>Вся Россия</strong> — Готовы к выездам в любой город</li>
-                </ul>
-            </div>
+    {{> widgets }}
 
-            <div class="footer-contacts">
-                <h4>Контакты</h4>
-                <p>Ольга Беляева — ведущий декоратор</p>
-                <a href="tel:+79207222202" class="footer-phone">+7 (920) 722-22-02</a>
-                <div class="footer-socials">
-                    <a href="https://instagram.com/decorverywell" target="_blank" class="social-icon" aria-label="Instagram">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-                    </a>
-                    <a href="https://t.me/decorverywell46" target="_blank" class="social-icon" aria-label="Telegram">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" x2="11" y1="2" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-                    </a>
-                    <a href="https://vk.com/decorverywell46" target="_blank" class="social-icon" aria-label="VKontakte">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.45 5.96c.17-.56-.01-.97-.8-.97h-2.62c-.67 0-.98.35-1.15.75 0 0-1.33 3.24-3.22 5.35-.61.61-.89.8-.12.8.5 0 1.97-.61 1.97-2.08V8.16c0-.66-.19-.97-.75-.97H14.1c-.42 0-.68.31-.68.61 0 .63.94.77 1.03 2.54v3.83c0 .84-.15.99-.48.99-1 0-3.23-3.25-4.59-6.98-.25-.69-.49-.97-1.17-.97H5.6c-.75 0-.9.35-.9.75 0 .7 5.3 12.6 11.23 12.6h2.62c.75 0 .9-.35.9-.75v-2.35c0-.67.14-.81.61-.81.35 0 .96.18 2.37 1.54 1.62 1.62 1.88 2.37 2.79 2.37h2.62c.75 0 1.12-.35.9-.97-.24-.73-1.08-1.79-2.2-3.05-.61-.71-1.53-1.48-1.81-1.87-.39-.49-.28-.71 0-1.16 0 0 3.19-4.49 3.52-6z"/></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom container">
-            <p>&copy; 2026 Студия декора Very Well Decor. Все права защищены.</p>
-            <p><a href="/privacy" style="color: inherit; text-decoration: underline;">Политика конфиденциальности</a></p>
-            <p>Дизайн и разработка: <a href="https://linktr.ee/pluxury" target="_blank" style="color: inherit; text-decoration: underline;">pluxury design</a></p>
-        </div>
-    </footer>
-
-    <!-- Premium Lightbox Modal for Gallery Viewing -->
-    <div id="lightbox-modal" class="lightbox-modal">
-        <button class="lightbox-close" aria-label="Закрыть"><i data-lucide="x"></i></button>
-        <button class="lightbox-nav prev-pic" aria-label="Предыдущее фото"><i data-lucide="chevron-left"></i></button>
-        <div class="lightbox-content">
-            <img id="lightbox-img" src="" alt="Детали декора">
-            <div class="lightbox-caption-box">
-                <span id="lightbox-category" class="lightbox-category gold">Классический стиль</span>
-                <h4 id="lightbox-title">Золотая симфония</h4>
-                <p id="lightbox-location"><i data-lucide="map-pin"></i> Ресторан Гринн</p>
-            </div>
-        </div>
-        <button class="lightbox-nav next-pic" aria-label="Следующее фото"><i data-lucide="chevron-right"></i></button>
-    </div>
-
-    <!-- Success Modal -->
-    <div id="success-modal" class="success-modal">
-        <div class="success-box glass-panel">
-            <button class="success-close"><i data-lucide="x"></i></button>
-            <div class="success-icon"><i data-lucide="sparkles"></i></div>
-            <h3>Ваша заявка принята!</h3>
-            <p id="success-message">Мы свяжемся с вами в течение 2 часов, чтобы обсудить детали вашего торжества.</p>
-            <button class="btn btn-primary btn-sm close-success-btn">Отлично</button>
-        </div>
-    </div>
-
-    <!-- Floating Chat Widgets -->
-    <div class="floating-contact-widgets">
-        <div class="widgets-trigger" aria-label="Открыть контакты">
-            <i data-lucide="message-circle" class="trigger-icon open-icon"></i>
-            <i data-lucide="x" class="trigger-icon close-icon" style="display: none;"></i>
-        </div>
-        <div class="widgets-list">
-            <a href="https://wa.me/79207222202" target="_blank" class="widget-btn whatsapp" aria-label="Написать в WhatsApp"><i data-lucide="phone"></i></a>
-            <a href="https://t.me/decorverywell46" target="_blank" class="widget-btn telegram" aria-label="Написать в Telegram"><i data-lucide="send"></i></a>
-            <a href="https://max.ru/u/f9LHodD0cOJ4Jc7xIibcgKLWkVCSGxh7HkOtTG8Z7isYyR0eCJTHIOxyhcg" target="_blank" class="widget-btn max-messenger" aria-label="Написать в MAX">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" style="width: 20px; height: 20px;"><path fill-rule="evenodd" d="M50.76 0c27.53 0 49.12 22.34 49.12 49.89S77.61 99.23 51.02 99.23c-9.43 0-14.01-1.33-21.37-6.54-.5-.36-1.2-.26-1.63.19-5.66 6.04-20.17 10.28-20.83 2.03C7.19 80.53 0 71.18 0 49.61 0 21.3 23.22 0 50.76 0m.77 24.55c-13.07-.68-23.26 8.39-25.51 22.58-1.86 11.75 1.44 26.07 4.26 26.8 1.2.3 4.08-1.9 6.18-3.88.4-.37.99-.44 1.45-.15 3.27 2 6.97 3.5 11.05 3.71 13.42.7 25.3-9.8 26-23.21.71-13.42-10.01-25.14-23.43-25.85" clip-rule="evenodd"></path></svg>
-            </a>
-        </div>
-    </div>
-
-    <!-- Lucide Icons CDN -->
-    
-    <!-- Back to Top Button -->
-    <button id="back-to-top" class="back-to-top-btn" aria-label="Наверх">
-        <i data-lucide="arrow-up"></i>
-    </button>
-
-    <!-- Cookie Notice Banner -->
-    <div id="cookie-notice" class="cookie-notice glass-panel">
-        <div class="cookie-content">
-            <i data-lucide="cookie" class="cookie-icon"></i>
-            <p>Мы используем cookies для улучшения работы сайта. <a href="/privacy" class="cookie-link">Политика конфиденциальности</a>.</p>
-        </div>
-        <button id="cookie-accept-btn" class="btn btn-primary btn-sm">OK</button>
-    </div>
-
-<script src="https://unpkg.com/lucide@latest" defer></script>
-    <!-- Script -->
-    <script src="assets/js/main.min.js" defer></script>
+    {{> scripts }}
 </body>
 </html>
-
 

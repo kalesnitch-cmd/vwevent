@@ -90,7 +90,7 @@ export default async function handler(req, res) {
                    `👤 *Имя:* ${name}\n` +
                    `📞 *Телефон:* ${phone}\n` +
                    `📅 *Дата свадьбы:* ${date || 'Не указана'}\n` +
-                   `📦 *Пакет:* ${packageVal || 'Пока не определились'}\n` +
+                   `📦 *Услуга:* ${packageVal || 'Пока не определились'}\n` +
                    `✉️ *Способ связи:* ${prefText}\n`;
             if (preference === 'telegram') {
                 text += `🔗 *Telegram:* [Открыть чат](${telegramLink}) | [В приложении](${telegramDeepLink})\n`;

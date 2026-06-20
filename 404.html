@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница не найдена (404) | Very Well Decor Studio</title>
+    <meta name="description" content="К сожалению, запрашиваемая страница не найдена. Вернитесь на главную страницу или ознакомьтесь с услугами студии декора Very Well.">
+    <meta name="robots" content="noindex, follow">
+    {{> head-common }}
+</head>
+<body class="theme-white-bridal subpage-body">
+
+    <!-- Header Navigation -->
+    {{> header }}
+
+    <main>
+        <!-- 404 Error Section -->
+        <section class="subpage-header error-page-hero" style="padding: 120px 0; text-align: center; background: #faf9f6;">
+            <div class="container">
+                <span class="section-tag gold" style="font-size: 6rem; font-family: 'Playfair Display', serif; display: block; margin-bottom: 10px; line-height: 1; color: var(--primary);">404</span>
+                <h1 class="display-title" style="font-size: 2.2rem; margin-bottom: 20px; font-family: 'Playfair Display', serif; color: #171717;">Страница не найдена</h1>
+                <div style="width: 50px; height: 1px; background-color: var(--primary); margin: 0 auto 30px auto; opacity: 0.6;"></div>
+                <p class="subpage-subtitle" style="max-width: 600px; margin: 0 auto 40px auto; font-size: 1.05rem; line-height: 1.7; color: rgba(27, 26, 24, 0.85); font-family: 'Manrope', sans-serif;">
+                    К сожалению, запрашиваемая вами страница не существует или была перенесена. Возможно, был введен неверный веб-адрес.
+                </p>
+                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                    <a href="{{rootPath}}index.html" class="btn btn-primary" style="padding: 12px 28px; font-size: 0.9rem;">На главную</a>
+                    <a href="{{rootPath}}uslugi.html" class="btn btn-outline" style="padding: 12px 28px; font-size: 0.9rem; border: 1px solid var(--primary); color: var(--primary);">Наши услуги</a>
+                    <a href="{{rootPath}}contacts.html" class="btn btn-outline" style="padding: 12px 28px; font-size: 0.9rem; border: 1px solid var(--primary); color: var(--primary);">Контакты</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    {{> footer }}
+    {{> widgets }}
+    {{> scripts }}
+</body>
+</html>

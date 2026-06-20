@@ -4,48 +4,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    /* --- 1. Premium Custom Cursor --- */
-    const cursor = document.querySelector('.custom-cursor');
-    const follower = document.querySelector('.custom-cursor-follower');
-    
-    let mouseX = 0, mouseY = 0; // Mouse positions
-    let posX = 0, posY = 0;     // Follower positions
 
-    if (cursor && follower && window.matchMedia('(min-width: 769px)').matches) {
-        document.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-            
-            // Instantly move the core dot
-            cursor.style.left = `${mouseX}px`;
-            cursor.style.top = `${mouseY}px`;
-        });
-
-        // Animate the follower circle with lag/damping
-        const animateCursor = () => {
-            posX += (mouseX - posX) * 0.15;
-            posY += (mouseY - posY) * 0.15;
-
-            follower.style.left = `${posX}px`;
-            follower.style.top = `${posY}px`;
-
-            requestAnimationFrame(animateCursor);
-        };
-        animateCursor();
-
-        // Hover effect for interactive elements
-        const interactives = document.querySelectorAll('a, button, input, select, textarea, .gallery-item, .quiz-option, [role="button"]');
-        interactives.forEach(item => {
-            item.addEventListener('mouseenter', () => {
-                cursor.classList.add('hovered');
-                follower.classList.add('hovered');
-            });
-            item.addEventListener('mouseleave', () => {
-                cursor.classList.remove('hovered');
-                follower.classList.remove('hovered');
-            });
-        });
-    }
 
 
     // State variable shared between dragging and lightbox clicking
@@ -93,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const setTodayDate = () => {
         const dateInput = document.getElementById('form-date');
-        const quizDateInput = document.getElementById('quiz-date');
         const today = new Date();
         const yyyy = today.getFullYear();
         let mm = today.getMonth() + 1;
@@ -106,10 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (dateInput) {
             dateInput.value = formattedToday;
             dateInput.min = formattedToday;
-        }
-        if (quizDateInput) {
-            quizDateInput.value = formattedToday;
-            quizDateInput.min = formattedToday;
         }
     };
     
@@ -135,14 +89,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
     const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+    const mainHeader = document.querySelector('.main-header');
 
     if (menuToggle && mobileMenuOverlay) {
+        const closeMobileMenu = () => {
+            menuToggle.classList.remove('active');
+            mobileMenuOverlay.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            if (mainHeader) {
+                mainHeader.classList.remove('menu-open');
+            }
+            document.body.style.overflow = '';
+        };
+
+        menuToggle.setAttribute('aria-expanded', 'false');
+
         menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
-            mobileMenuOverlay.classList.toggle('active');
+            const isOpen = menuToggle.classList.toggle('active');
+            mobileMenuOverlay.classList.toggle('active', isOpen);
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+            if (mainHeader) {
+                mainHeader.classList.toggle('menu-open', isOpen);
+            }
             
             // Prevent body scroll when menu is open
-            if (mobileMenuOverlay.classList.contains('active')) {
+            if (isOpen) {
                 document.body.style.overflow = 'hidden';
             } else {
                 document.body.style.overflow = '';
@@ -152,10 +123,20 @@ document.addEventListener('DOMContentLoaded', () => {
         // Close menu on link click
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
-                menuToggle.classList.remove('active');
-                mobileMenuOverlay.classList.remove('active');
-                document.body.style.overflow = '';
+                closeMobileMenu();
             });
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileMenuOverlay.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768 && mobileMenuOverlay.classList.contains('active')) {
+                closeMobileMenu();
+            }
         });
     }
 
@@ -475,228 +456,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    /* --- 7. Interactive Wedding Style Quiz --- */
-    const quizForm = document.getElementById('wedding-quiz-form');
-    const quizSteps = document.querySelectorAll('.quiz-step');
-    const quizStepNums = document.querySelectorAll('.quiz-steps-indicators .step-num');
-    const progressFill = document.querySelector('.quiz-progress-bar .progress-fill');
-    
-    const prevStepBtn = document.querySelector('.quiz-nav-btn.prev-step');
-    const nextStepBtn = document.querySelector('.quiz-nav-btn.next-step');
-    const submitQuizBtn = document.querySelector('.quiz-nav-btn.submit-quiz');
 
-    let activeStepIndex = 0; // 0-indexed corresponding to steps 1-5
-
-    const updateQuizUI = () => {
-        // Toggle steps visibility
-        quizSteps.forEach((step, idx) => {
-            step.classList.toggle('active', idx === activeStepIndex);
-        });
-
-        // Update progress bar
-        const progressPercentage = ((activeStepIndex + 1) / quizSteps.length) * 100;
-        if (progressFill) progressFill.style.width = `${progressPercentage}%`;
-
-        // Update step num indicators
-        quizStepNums.forEach((num, idx) => {
-            num.classList.toggle('active', idx === activeStepIndex);
-            num.classList.toggle('completed', idx < activeStepIndex);
-        });
-
-        // Toggle navigation buttons
-        if (activeStepIndex === 0) {
-            prevStepBtn.style.display = 'none';
-            nextStepBtn.style.display = 'inline-flex';
-            submitQuizBtn.style.display = 'none';
-        } else if (activeStepIndex === quizSteps.length - 1) { // Results screen (step 5)
-            prevStepBtn.style.display = 'inline-flex';
-            nextStepBtn.style.display = 'none';
-            submitQuizBtn.style.display = 'inline-flex';
-        } else {
-            prevStepBtn.style.display = 'inline-flex';
-            nextStepBtn.style.display = 'inline-flex';
-            submitQuizBtn.style.display = 'none';
-        }
-    };
-
-    const calculateQuizResult = () => {
-        // Extract selected answers
-        const location = document.querySelector('input[name="location"]:checked')?.value || 'banquet-hall';
-        const colors = document.querySelector('input[name="colors"]:checked')?.value || 'pastels';
-        const guests = document.querySelector('input[name="guests"]:checked')?.value || 'medium';
-        const vibe = document.querySelector('input[name="vibe"]:checked')?.value || 'classic';
-
-        // Result text containers
-        const resultStyleName = document.querySelector('.recommended-style-name');
-        const resultStyleDesc = document.querySelector('.recommended-style-desc');
-        const resultPriceVal = document.querySelector('.estimated-price');
-
-        // Logic variables
-        let recommendedStyle = "Классическая Элегантность";
-        let styleDesc = "Вашему выбору идеально соответствует торжественный классический декор с обилием цветов, хрустальными канделябрами, изящной сервировкой и теплым свечением сотен свечей.";
-        let estimatedPrice = "";
-
-        // Style Vibe Matching
-        if (vibe === 'classic') {
-            recommendedStyle = "Классическое Величие";
-            styleDesc = "Роскошный декор с обилием пышной флористики (розы, гортензии), зеркальными элементами, хрустальными люстрами и классическим убранством.";
-        } else if (vibe === 'modern') {
-            recommendedStyle = "Геометрический Модерн";
-            styleDesc = "Современный минимализм, строгие геометрические формы, игра света и неона, монохромные флористические акценты и стильные индустриальные детали.";
-        } else if (vibe === 'other-vibe') {
-            recommendedStyle = "Индивидуальный концепт";
-            styleDesc = "Вы выбрали собственный вариант атмосферы! Мы разработаем неповторимую концепцию оформления с нуля, учитывая ваши пожелания, выбранную локацию и цветовую гамму.";
-        } else if (vibe === 'cozy') {
-            recommendedStyle = "Уютный Ужин в Семейном кругу";
-            styleDesc = "Душевный камерный декор. Внимание к деталям: индивидуальные карточки меню, текстильные салфетки, эвкалипт и множество маленьких свечей.";
-        }
-
-        if (colors === 'other-color' && vibe !== 'other-vibe') {
-            styleDesc += " Цветовая гамма оформления будет полностью адаптирована под ваши пожелания.";
-        } else if (colors === 'white-crystal' && vibe === 'classic') {
-            styleDesc = "Хрустальный блеск и изысканная роскошь. Оформление с использованием прозрачных элементов, подвесных кристаллов, зеркал и белоснежной флористики.";
-        }
-
-        // Budget Estimation based on guests count and style factor
-        let baseCost = 280000;
-        if (guests === 'lite') {
-            baseCost = 120000;
-            estimatedPrice = `от 50 000 до 100 000 руб.`;
-        } else if (guests === 'medium') {
-            baseCost = 280000;
-            estimatedPrice = `от 100 000 до 200 000 руб.`;
-        } else if (guests === 'large') {
-            baseCost = 550000;
-            estimatedPrice = `от 200 000 до 350 000 руб.`;
-        } else if (guests === 'royal') {
-            baseCost = 900000;
-            estimatedPrice = `от 400 000+ руб. (Royal Custom)`;
-        }
-
-        // Write content to result screen
-        if (resultStyleName) resultStyleName.textContent = recommendedStyle;
-        if (resultStyleDesc) resultStyleDesc.textContent = styleDesc;
-        if (resultPriceVal) resultPriceVal.textContent = estimatedPrice;
-    };
-
-    if (quizForm && quizSteps.length > 0) {
-        // Next Button Click
-        if (nextStepBtn) {
-            nextStepBtn.addEventListener('click', () => {
-                if (activeStepIndex < quizSteps.length - 1) {
-                    activeStepIndex++;
-                    
-                    // If moving to results (step 5), compute values
-                    if (activeStepIndex === quizSteps.length - 1) {
-                        calculateQuizResult();
-                    }
-                    
-                    updateQuizUI();
-                }
-            });
-        }
-
-        // Prev Button Click
-        if (prevStepBtn) {
-            prevStepBtn.addEventListener('click', () => {
-                if (activeStepIndex > 0) {
-                    activeStepIndex--;
-                    updateQuizUI();
-                }
-            });
-        }
-
-        // Quiz Submission
-        quizForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            const name = document.getElementById('quiz-name').value;
-            const phone = document.getElementById('quiz-phone').value;
-            const date = document.getElementById('quiz-date')?.value || '';
-            const preference = document.querySelector('input[name="quiz-contact-preference"]:checked')?.value || 'whatsapp';
-            const style = document.querySelector('.recommended-style-name')?.textContent || '';
-            const budget = document.querySelector('.estimated-price')?.textContent || '';
-
-            // Extract raw answer text labels to send to Telegram
-            const locationEl = document.querySelector('input[name="location"]:checked')?.closest('.quiz-option')?.querySelector('.option-title');
-            const colorEl = document.querySelector('input[name="colors"]:checked')?.closest('.quiz-option')?.querySelector('.option-title');
-            const guestsEl = document.querySelector('input[name="guests"]:checked')?.closest('.quiz-option')?.querySelector('.option-title');
-            const vibeEl = document.querySelector('input[name="vibe"]:checked')?.closest('.quiz-option')?.querySelector('.option-title');
-            
-            const answersText = {
-                location: locationEl?.textContent?.trim() || '',
-                color: colorEl?.textContent?.trim() || '',
-                guests: guestsEl?.textContent?.trim() || '',
-                vibe: vibeEl?.textContent?.trim() || ''
-            };
-
-            // Play notification chime
-            playNotificationSound();
-
-            // Send notification to Telegram bot
-            fetch('https://verywell-decor.vercel.app/api/send-notification', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    type: 'quiz',
-                    name,
-                    phone,
-                    date,
-                    style,
-                    budget,
-                    preference,
-                    answers: answersText
-                })
-            }).catch(err => console.error('Telegram notification error:', err));
-            
-            // Show Success Modal
-            const successModal = document.getElementById('success-modal');
-            const successMsg = document.getElementById('success-message');
-            
-            if (successModal) {
-                if (successMsg) {
-                    successMsg.innerHTML = `Спасибо, <strong>${name}</strong>! Мы получили ваши ответы по квизу. Мы свяжемся с вами по номеру <strong>${phone}</strong> в течение 2 часов с готовым индивидуальным расчетом сметы и разбором стиля.`;
-                }
-                successModal.classList.add('active');
-            }
-
-            // Reset Quiz
-            quizForm.reset();
-            activeStepIndex = 0;
-            updateQuizUI();
-        });
-    }
-
-
-    /* --- 8. Pricing Package Autofil into Contact Form --- */
-    const packageSelect = document.getElementById('form-package');
-    const selectPackageBtns = document.querySelectorAll('.select-package');
-
-    if (packageSelect && selectPackageBtns.length > 0) {
-        selectPackageBtns.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                const packageName = btn.getAttribute('data-package');
-                
-                // Map names to select values
-                if (packageName.includes('LITE')) {
-                    packageSelect.value = 'lite';
-                } else if (packageName.includes('PREMIUM')) {
-                    packageSelect.value = 'premium';
-                } else if (packageName.includes('ROYAL')) {
-                    packageSelect.value = 'royal';
-                }
-                
-                // Scroll to contacts
-                const contactSection = document.getElementById('contacts');
-                if (contactSection) {
-                    window.scrollTo({
-                        top: contactSection.offsetTop - 80, // Offset for header
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    }
 
 
     /* --- 9. Contact Form Submission --- */
@@ -709,7 +469,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const name = document.getElementById('form-name').value;
             const phone = document.getElementById('form-phone').value;
             const date = document.getElementById('form-date').value;
-            const packageVal = document.getElementById('form-package').options[document.getElementById('form-package').selectedIndex].text;
+            const packageEl = document.getElementById('form-package');
+            const packageVal = packageEl ? packageEl.options[packageEl.selectedIndex].text : (document.querySelector('h1')?.textContent || 'С сайта');
             const message = document.getElementById('form-message').value;
             const preference = document.querySelector('input[name="contact-preference"]:checked')?.value || 'whatsapp';
 
@@ -831,7 +592,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     desktopLinks.forEach(link => {
                         const href = link.getAttribute('href');
                         const isMatch = href === `#${sectionId}` || href.endsWith(`#${sectionId}`);
-                        link.classList.toggle('active', isMatch);
+                        if (href.includes('#') || isMatch) {
+                            link.classList.toggle('active', isMatch);
+                        }
                     });
                 }
             });
@@ -915,18 +678,51 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
+
+        // Auto-expand and scroll to album from hash in URL (e.g. portfolio.html#album-arch)
+        const handleHashAlbum = () => {
+            const hash = window.location.hash;
+            if (hash) {
+                try {
+                    const targetAlbum = document.querySelector(hash);
+                    if (targetAlbum && targetAlbum.classList.contains('album-container')) {
+                        if (!targetAlbum.classList.contains('expanded')) {
+                            const toggleBtn = targetAlbum.querySelector('.toggle-album-btn');
+                            if (toggleBtn) {
+                                toggleBtn.click();
+                            } else {
+                                targetAlbum.classList.add('expanded');
+                            }
+                        }
+                        setTimeout(() => {
+                            targetAlbum.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }, 250);
+                    }
+                } catch (err) {
+                    console.warn("Invalid selector for hash:", hash, err);
+                }
+            }
+        };
+
+        window.addEventListener('load', handleHashAlbum);
+        window.addEventListener('hashchange', handleHashAlbum);
     }
 
     /* --- 14. Floating Back to Top Button --- */
     const backToTopBtn = document.getElementById('back-to-top');
     if (backToTopBtn) {
-        window.addEventListener('scroll', () => {
+        const updateBackToTopVisibility = () => {
             if (window.scrollY > 300) {
                 backToTopBtn.classList.add('visible');
+                backToTopBtn.classList.add('is-visible');
             } else {
                 backToTopBtn.classList.remove('visible');
+                backToTopBtn.classList.remove('is-visible');
             }
-        });
+        };
+
+        updateBackToTopVisibility();
+        window.addEventListener('scroll', updateBackToTopVisibility);
 
         backToTopBtn.addEventListener('click', () => {
             window.scrollTo({
@@ -973,9 +769,253 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    /* --- 17. Interactive Service Sliders --- */
+    const serviceSliders = document.querySelectorAll('.service-slider');
+    serviceSliders.forEach(slider => {
+        const slides = slider.querySelectorAll('.service-slide');
+        if (slides.length <= 1) return;
+        
+        let currentIdx = 0;
+        setInterval(() => {
+            slides[currentIdx].classList.remove('active');
+            currentIdx = (currentIdx + 1) % slides.length;
+            slides[currentIdx].classList.add('active');
+        }, 5000);
+    });
+    /* --- 18. Homepage Testimonials Slider --- */
+    const testimonialsContainer = document.querySelector('.testimonials-container');
+    if (testimonialsContainer) {
+        const slides = testimonialsContainer.querySelectorAll('.testimonial-slide');
+        const dots = testimonialsContainer.querySelectorAll('.testimonials-dot');
+        const prevBtn = testimonialsContainer.querySelector('.testimonial-nav-btn.prev');
+        const nextBtn = testimonialsContainer.querySelector('.testimonial-nav-btn.next');
+        const track = testimonialsContainer.querySelector('.testimonials-track');
+        
+        let currentIndex = 0;
+        let slideInterval;
+
+        const showTestimonial = (index) => {
+            // Bounds check
+            if (index < 0) index = slides.length - 1;
+            if (index >= slides.length) index = 0;
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+            
+            if (track) {
+                track.style.transform = `translateX(-${index * 100}%)`;
+            }
+            
+            currentIndex = index;
+        };
+
+        const nextTestimonial = () => {
+            showTestimonial(currentIndex + 1);
+        };
+
+        const prevTestimonial = () => {
+            showTestimonial(currentIndex - 1);
+        };
+
+        // Click handlers
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                nextTestimonial();
+                startAutoSlide();
+            });
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                prevTestimonial();
+                startAutoSlide();
+            });
+        }
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', (e) => {
+                const targetIdx = parseInt(e.currentTarget.getAttribute('data-slide'));
+                clearInterval(slideInterval);
+                showTestimonial(targetIdx);
+                startAutoSlide();
+            });
+        });
+
+        // Auto slide every 7 seconds
+        const startAutoSlide = () => {
+            slideInterval = setInterval(nextTestimonial, 7000);
+        };
+
+        // Touch swipe support for mobile
+        const slider = testimonialsContainer.querySelector('.testimonials-slider');
+        if (slider) {
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            slider.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            slider.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, { passive: true });
+
+            const handleSwipe = () => {
+                const swipeThreshold = 50;
+                const diffX = touchEndX - touchStartX;
+
+                if (Math.abs(diffX) > swipeThreshold) {
+                    clearInterval(slideInterval);
+                    if (diffX > 0) {
+                        // Swipe right -> previous slide
+                        prevTestimonial();
+                    } else {
+                        // Swipe left -> next slide
+                        nextTestimonial();
+                    }
+                    startAutoSlide();
+                }
+            };
+        }
+
+        // Start
+        startAutoSlide();
+    }
+    /* --- 19. Set Active Navigation Link based on URL --- */
+    const setActiveNavLink = () => {
+        const currentUrl = new URL(window.location.href);
+        let currentPath = currentUrl.pathname.replace(/\/$/, "").replace(/\.html$/, "");
+        
+        // Normalize directory prefix /vwevent-v2
+        currentPath = currentPath.replace(/^\/vwevent-v2/, "");
+        if (currentPath === '' || currentPath === '/index') {
+            currentPath = '/';
+        }
+
+        const matchLink = (linkSelector) => {
+            const navLinks = document.querySelectorAll(linkSelector);
+            navLinks.forEach(link => {
+                // Use link.href which contains the fully resolved absolute URL by the browser
+                let linkPath = "";
+                try {
+                    const linkUrl = new URL(link.href);
+                    linkPath = linkUrl.pathname.replace(/\/$/, "").replace(/\.html$/, "");
+                } catch (e) {
+                    return;
+                }
+                
+                // Normalize directory prefix /vwevent-v2
+                linkPath = linkPath.replace(/^\/vwevent-v2/, "");
+                if (linkPath === '' || linkPath === '/index') {
+                    linkPath = '/';
+                }
+
+                // Check if current path matches or starts with linkPath
+                let isMatch = false;
+                if (linkPath === '/') {
+                    isMatch = currentPath === '/';
+                } else {
+                    // Match exact path or subpages
+                    isMatch = currentPath === linkPath || currentPath.startsWith(linkPath + '/');
+                }
+
+                link.classList.toggle('active', isMatch);
+            });
+        };
+
+        matchLink('.desktop-nav .nav-link');
+        matchLink('.mobile-nav .mobile-nav-link');
+    };
+
+    setActiveNavLink();
+
     /* --- 12. Initialize Icons --- */
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();
     }
 
+
+    /* --- Custom Cursor Logic (Dynamic Dark/Light Modes) --- */
+    const initCustomCursor = () => {
+        // Only run on desktop devices (width > 768px)
+        if (window.innerWidth <= 768) return;
+
+        const cursor = document.createElement('div');
+        cursor.className = 'custom-cursor';
+        const follower = document.createElement('div');
+        follower.className = 'custom-cursor-follower';
+
+        document.body.appendChild(cursor);
+        document.body.appendChild(follower);
+
+        let mouseX = 0;
+        let mouseY = 0;
+        let cursorX = 0;
+        let cursorY = 0;
+        let followerX = 0;
+        let followerY = 0;
+
+        window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            
+            // Check if cursor is over a dark background element to adjust contrast
+            const element = document.elementFromPoint(mouseX, mouseY);
+            if (element) {
+                const isOverDark = element.closest('.dark-theme') || 
+                                   element.closest('#hero') || 
+                                   element.closest('#homepage-pricing') ||
+                                   element.closest('.hero-section');
+                if (isOverDark) {
+                    cursor.classList.add('light-mode');
+                    follower.classList.add('light-mode');
+                } else {
+                    cursor.classList.remove('light-mode');
+                    follower.classList.remove('light-mode');
+                }
+            }
+        });
+
+        const tick = () => {
+            // Smooth lerp for follower (speed factor 0.15)
+            cursorX = mouseX;
+            cursorY = mouseY;
+            followerX += (mouseX - followerX) * 0.15;
+            followerY += (mouseY - followerY) * 0.15;
+
+            cursor.style.left = cursorX + 'px';
+            cursor.style.top = cursorY + 'px';
+            follower.style.left = followerX + 'px';
+            follower.style.top = followerY + 'px';
+
+            requestAnimationFrame(tick);
+        };
+        tick();
+
+        // Hover states for interactive elements
+        const updateHoverState = () => {
+            const hoverTargets = document.querySelectorAll('a, button, [role="button"], .gallery-item, .quiz-option, .swiper-button-next, .swiper-button-prev');
+            hoverTargets.forEach(target => {
+                // Ensure we don't attach duplicate listeners
+                if (target.dataset.cursorBound) return;
+                target.dataset.cursorBound = "true";
+
+                target.addEventListener('mouseenter', () => {
+                    cursor.classList.add('hovered');
+                    follower.classList.add('hovered');
+                });
+                target.addEventListener('mouseleave', () => {
+                    cursor.classList.remove('hovered');
+                    follower.classList.remove('hovered');
+                });
+            });
+        };
+        // initCustomCursor();
+    };
 });

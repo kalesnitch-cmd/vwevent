@@ -1,0 +1,71 @@
+
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="{{rootPath}}index.html" class="logo-wrapper">
+                <img src="/assets/images/logo.webp" alt="Very Well Décor Logo" class="header-logo" width="42" height="42">
+                <div class="logo-text">
+                    <span class="brand-name">Very Well</span>
+                    <span class="brand-sub">DÉCOR STUDIO</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="{{rootPath}}index.html" class="nav-link">Главная</a></li>
+                    <li><a href="{{rootPath}}uslugi.html" class="nav-link">Услуги</a></li>
+                    <li><a href="{{rootPath}}portfolio.html" class="nav-link">Портфолио</a></li>
+                    <li><a href="{{rootPath}}otzyvy.html" class="nav-link">Отзывы</a></li>
+                    <li><a href="{{rootPath}}contacts.html" class="nav-link">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <!-- Action Button -->
+            <div class="header-cta">
+                <a href="{{rootPath}}contacts.html" class="btn btn-primary btn-sm">Обсудить проект</a>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button class="menu-toggle" aria-label="Открыть меню">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Overlay Menu -->
+        <div class="mobile-menu-overlay">
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="{{rootPath}}index.html" class="mobile-nav-link">Главная</a></li>
+                    <li><a href="{{rootPath}}uslugi.html" class="mobile-nav-link">Услуги и цены</a></li>
+                    <li><a href="{{rootPath}}portfolio.html" class="mobile-nav-link">Портфолио</a></li>
+                    <li><a href="{{rootPath}}otzyvy.html" class="mobile-nav-link">Отзывы</a></li>
+                    <li><a href="{{rootPath}}contacts.html" class="mobile-nav-link">Контакты</a></li>
+                    <li><a href="{{rootPath}}faq.html" class="mobile-nav-link">Вопросы и ответы</a></li>
+                </ul>
+                <div class="mobile-menu-footer">
+                     <a href="tel:+79207222202" class="phone-link">+7 (920) 722-22-02</a>
+                    <div class="mobile-socials">
+                        <a href="https://max.ru/u/f9LHodD0cOJ4Jc7xIibcgKLWkVCSGxh7HkOtTG8Z7isYyR0eCJTHIOxyhcg" target="_blank" class="social-icon-btn" aria-label="MAX">
+                            <svg width="16" height="16" viewBox="0 0 100 100" fill="currentColor">
+                                <path fill-rule="evenodd" d="M50.76 0c27.53 0 49.12 22.34 49.12 49.89S77.61 99.23 51.02 99.23c-9.43 0-14.01-1.33-21.37-6.54-.5-.36-1.2-.26-1.63.19-5.66 6.04-20.17 10.28-20.83 2.03C7.19 80.53 0 71.18 0 49.61 0 21.3 23.22 0 50.76 0m.77 24.55c-13.07-.68-23.26 8.39-25.51 22.58-1.86 11.75 1.44 26.07 4.26 26.8 1.2.3 4.08-1.9 6.18-3.88.4-.37.99-.44 1.45-.15 3.27 2 6.97 3.5 11.05 3.71 13.42.7 25.3-9.8 26-23.21.71-13.42-10.01-25.14-23.43-25.85" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <a href="https://t.me/decorverywell46" target="_blank" class="social-icon-btn" aria-label="Telegram">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.91 3.79L20.3 20.84c-.25 1.21-.98 1.5-2 .94l-5.5-4.07-2.66 2.57c-.3.3-.55.56-1.14.56l.4-5.64 10.28-9.3c.45-.4-.1-.62-.7-.22L6.33 13.3 1.2 11.7c-1.1-.35-1.12-1.12.23-1.65L22.1 2.26c.96-.38 1.8.2 1.8 1.53z"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/79207222202" target="_blank" class="social-icon-btn" aria-label="WhatsApp">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.248 8.477 3.517 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.458L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.858.002-2.634-1.023-5.11-2.885-6.974C16.764 1.909 14.287.886 11.652.886 6.215.886 1.79 5.305 1.787 10.743c-.002 1.849.486 3.655 1.411 5.257l-1.03 3.764 3.861-.99c1.554.847 3.125 1.28 4.618 1.28zm11.367-7.662c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+

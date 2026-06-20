@@ -1,133 +1,87 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио | Свадебный декор в Курске и оформление зала на свадьбу — Very Well</title>
-    <meta name="description" content="Фотографии оформления зала на свадьбу в Курске, свадебного декора, украшения выездной регистрации и праздников от декоратора Ольги Беляевой и агентства Very Well.">
-    <meta name="keywords" content="свадебный декор курск, праздники курск, декор курск, декоратор курск, оформление свадьбы в курске, ведение свадьбы, свадьба курск, Оформление зала на свадьбу в Курске, украшение свадьбы курск, Very Well, Ольга Беляева">
+    <title>Портфолио | Свадебный декор в Курске — Very Well</title>
+    <meta name="description" content="Портфолио Very Well Decor Studio: реальные свадебные проекты, оформление залов, выездных регистраций, президиумов и декоративных зон в Курске и области.">
+    <meta name="keywords" content="портфолио свадебного декора, свадебный декор Курск, выездная регистрация Курск, оформление зала на свадьбу, президиум молодожёнов, Very Well Decor Studio">
     <meta name="robots" content="index, follow">
     
-    <!-- Structured Data (JSON-LD) for Google Site Name -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Very Well - Студия декора",
-      "alternateName": ["Студия декора Very Well", "Вэри Велл"],
-      "url": "https://vwevent.ru/"
-    }
-    </script>
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Very Well — Праздничное агентство & Декор Ольги Беляевой">
-    <meta property="og:description" content="Изысканное оформление свадебных торжеств по всей России. Пройдите квиз и получите расчет стоимости проекта.">
-    <meta property="og:image" content="assets/images/hero_decor_1.webp">
-    <meta property="og:type" content="website">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/favicon.png?v=3">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"></noscript>
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.min.css">
+    {{> head-common }}
 </head>
-<body>
+<body class="theme-white-bridal subpage-body portfolio-page portfolio-showcase-page">
 
-    <!-- Custom Cursor (Premium Micro-interaction) -->
-    <div class="custom-cursor"></div>
-    <div class="custom-cursor-follower"></div>
-
-    <!-- Header Navigation -->
-    <header class="main-header">
-        <div class="header-container">
-            <a href="/" class="logo-wrapper">
-                <img src="assets/images/logo.webp" alt="Very Well Décor Logo" class="header-logo" width="42" height="42">
-                <div class="logo-text">
-                    <span class="brand-name">Very Well</span>
-                    <span class="brand-sub">DÉCOR STUDIO</span>
-                </div>
-            </a>
-
-            <!-- Desktop Menu -->
-            <nav class="desktop-nav">
-                <ul>
-                    <li><a href="/" class="nav-link">Главная</a></li>
-                    <li><a href="/#about" class="nav-link">О нас</a></li>
-                    <li><a href="/portfolio" class="nav-link active">Портфолио</a></li>
-                    <li><a href="/#quiz" class="nav-link">Подбор стиля</a></li>
-                    <li><a href="/#prices" class="nav-link">Услуги</a></li>
-                    <li><a href="/#contacts" class="nav-link">Контакты</a></li>
-                </ul>
-            </nav>
-
-            <!-- Action Button -->
-            <div class="header-cta">
-                <a href="/#contacts" class="btn btn-outline btn-sm">Обсудить проект</a>
-            </div>
-
-            <!-- Hamburger Button -->
-            <button class="menu-toggle" aria-label="Открыть меню">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-        </div>
-
-        <!-- Mobile Overlay Menu -->
-        <div class="mobile-menu-overlay">
-            <nav class="mobile-nav">
-                <ul>
-                    <li><a href="/" class="mobile-nav-link">Главная</a></li>
-                    <li><a href="/#about" class="mobile-nav-link">О нас</a></li>
-                    <li><a href="/portfolio" class="mobile-nav-link active">Портфолио</a></li>
-                    <li><a href="/#quiz" class="mobile-nav-link">Подбор стиля</a></li>
-                    <li><a href="/#prices" class="mobile-nav-link">Услуги и Цены</a></li>
-                    <li><a href="/#contacts" class="mobile-nav-link">Контакты</a></li>
-                </ul>
-                <div class="mobile-menu-footer">
-                    <a href="tel:+79207222202" class="phone-link">+7 (920) 722-22-02</a>
-                    <div class="mobile-socials">
-                        <a href="https://instagram.com/decorverywell" target="_blank" class="social-icon-btn" aria-label="Instagram"><i data-lucide="instagram"></i></a>
-                        <a href="https://t.me/decorverywell46" target="_blank" class="social-icon-btn" aria-label="Telegram"><i data-lucide="send"></i></a>
-                        <a href="https://wa.me/79207222202" target="_blank" class="social-icon-btn" aria-label="WhatsApp"><i data-lucide="phone"></i></a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
+    {{> header }}
     <main>
         
         <!-- Header Subpage -->
-        <section class="subpage-header">
-            <div class="container">
-                <a href="/" class="back-home-link"><i data-lucide="arrow-left"></i> На главную</a>
-                <h1 class="display-title">Портфолио</h1>
-                <p class="subpage-subtitle">Фотогалерея наших свадебных проектов: оформление залов на свадьбу в Курске, украшение выездной регистрации и декор праздников от декоратора Ольги Беляевой и агентства Very Well.</p>
+        <section class="subpage-header portfolio-hero-section">
+            <div class="container portfolio-hero-layout">
+                <div class="portfolio-hero-copy">
+                    <span class="section-tag">ПОРТФОЛИО РАБОТ</span>
+                    <h1 class="display-title">Свадебные проекты в деталях</h1>
+                    <div class="portfolio-hero-divider"></div>
+                    <p class="subpage-subtitle">Альбомы с реальными оформлениями Very Well Decor Studio: церемонии, президиумы, банкетные залы, флористика и 3D-визуализации будущего декора.</p>
+                </div>
+                <div class="portfolio-hero-collage" aria-hidden="true">
+                    <div class="portfolio-hero-card portfolio-hero-card--main">
+                        <img src="assets/images/portfolio/arki/-oOiQOjJn1wHHlK2Yhjqrc5yigLMxkXEO4eeJpvHdG33v-sD2Uf_bkHyQbPBCPyl5SCjI-o_tVlrYC50rVBt-VAj.webp" alt="Свадебная арка">
+                    </div>
+                    <div class="portfolio-hero-card portfolio-hero-card--top">
+                        <img src="assets/images/portfolio/prezidium/3ibnF-ocr31osg7khy0ySW-rvndnjYMi5VWI42AgMuDLhgRC8oMJD4N8MQKW6d6vxXmfqcmJl0dmRiabbC9Aao-W.webp" alt="Президиум молодожёнов">
+                    </div>
+                    <div class="portfolio-hero-card portfolio-hero-card--bottom">
+                        <img src="assets/images/portfolio/zal/decor_26.webp" alt="Оформление банкетного зала">
+                    </div>
+                    <div class="portfolio-hero-card portfolio-hero-card--accent">
+                        <img src="assets/images/portfolio/3d/3d_decor_1.webp" alt="3D-визуализация декора">
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Portfolio Album Banners -->
-        <section class="portfolio-albums section-padding dark-theme" style="padding-top: 60px; padding-bottom: 60px;">
+        <section class="portfolio-albums section-padding portfolio-albums-section">
             <div class="container">
-                
-                <!-- Album 1: Свадебные арки -->
+                <!-- Album 1: РЎРІР°РґРµР±РЅС‹Рµ Р°СЂРєРё -->
                 <div class="album-container" id="album-arch">
-                    <div class="album-banner glass-panel" style="background-image: linear-gradient(to right, rgba(21, 21, 20, 0.92) 30%, rgba(21, 21, 20, 0.45) 100%), url('assets/images/portfolio/arki/-oOiQOjJn1wHHlK2Yhjqrc5yigLMxkXEO4eeJpvHdG33v-sD2Uf_bkHyQbPBCPyl5SCjI-o_tVlrYC50rVBt-VAj.webp');">
+                    <div class="album-banner glass-panel">
                         <div class="album-banner-content">
-                            <span class="album-count gold">22 фото</span>
+                            <span class="album-count gold">24 фото</span>
                             <h2>Свадебные арки и выездные регистрации</h2>
-                            <p>Фоновые конструкции, цветочные арки и оформление церемоний на открытом воздухе и в залах.</p>
+                            <p>Церемонии на открытом воздухе, в залах и камерных пространствах: арки, проходы, флористика и свет.</p>
                             <button class="btn btn-primary btn-sm toggle-album-btn">Открыть альбом <i data-lucide="chevron-down"></i></button>
                         </div>
                     </div>
                     <div class="album-grid-wrapper">
                         <div class="portfolio-full-grid">
+                    <div class="gallery-item classic arch" data-src="assets/images/portfolio/arki/010626-21.webp">
+                        <div class="gallery-img-container">
+                            <img src="assets/images/portfolio/arki/010626-21.webp" alt="Новая свадебная арка в светлой флористике" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <span class="category">ЦЕРЕМОНИЯ</span>
+                                    <h3>Новая свадебная арка в светлой флористике</h3>
+                                </div>
+                                <span class="zoom-icon"><i data-lucide="maximize-2"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item modern arch" data-src="assets/images/portfolio/arki/010626-29.webp">
+                        <div class="gallery-img-container">
+                            <img src="assets/images/portfolio/arki/010626-29.webp" alt="Оформление церемонии с акцентом на арку и проход" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <span class="category">ВЫЕЗДНАЯ РЕГИСТРАЦИЯ</span>
+                                    <h3>Оформление церемонии с акцентом на арку и проход</h3>
+                                </div>
+                                <span class="zoom-icon"><i data-lucide="maximize-2"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Item 1 (Classic -> arch) -->
                     <div class="gallery-item classic arch" data-src="assets/images/portfolio/arki/-oOiQOjJn1wHHlK2Yhjqrc5yigLMxkXEO4eeJpvHdG33v-sD2Uf_bkHyQbPBCPyl5SCjI-o_tVlrYC50rVBt-VAj.webp">
                         <div class="gallery-img-container">
@@ -438,23 +392,88 @@
                         </div>
                         <!-- Album Pagination / Load More -->
                         <div class="album-pagination" style="text-align: center; margin-top: 30px;">
-                            <button class="btn btn-outline-white load-more-album-btn">Показать еще <i data-lucide="plus"></i></button>
+                            <button class="btn btn-outline-white load-more-album-btn">Показать ещё <i data-lucide="plus"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Album 2: Президиумы -->
+                <!-- Album 2: РџСЂРµР·РёРґРёСѓРјС‹ -->
                 <div class="album-container" id="album-presidium">
-                    <div class="album-banner glass-panel" style="background-image: linear-gradient(to right, rgba(21, 21, 20, 0.92) 30%, rgba(21, 21, 20, 0.45) 100%), url('assets/images/portfolio/prezidium/3ibnF-ocr31osg7khy0ySW-rvndnjYMi5VWI42AgMuDLhgRC8oMJD4N8MQKW6d6vxXmfqcmJl0dmRiabbC9Aao-W.webp');">
+                    <div class="album-banner glass-panel">
                         <div class="album-banner-content">
-                            <span class="album-count gold">29 фото</span>
-                            <h2>Президиум и стол молодоженов</h2>
-                            <p>Главный стол вечера: текстиль, флористика, световой декор и уникальные задники президиума.</p>
+                            <span class="album-count gold">34 фото</span>
+                            <h2>Президиум и стол молодожёнов</h2>
+                            <p>Главная зона пары: фон, стол, текстиль, свечи, флористика и декоративные акценты.</p>
                             <button class="btn btn-primary btn-sm toggle-album-btn">Открыть альбом <i data-lucide="chevron-down"></i></button>
                         </div>
                     </div>
                     <div class="album-grid-wrapper">
                         <div class="portfolio-full-grid">
+                    <div class="gallery-item classic presidium" data-src="assets/images/portfolio/prezidium/010626-1.webp">
+                        <div class="gallery-img-container">
+                            <img src="assets/images/portfolio/prezidium/010626-1.webp" alt="Новый президиум с акцентной флористикой" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <span class="category">ПРЕЗИДИУМ</span>
+                                    <h3>Новый президиум с акцентной флористикой</h3>
+                                </div>
+                                <span class="zoom-icon"><i data-lucide="maximize-2"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item modern presidium" data-src="assets/images/portfolio/prezidium/010626-5.webp">
+                        <div class="gallery-img-container">
+                            <img src="assets/images/portfolio/prezidium/010626-5.webp" alt="Президиум с мягким светом и декоративными акцентами" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <span class="category">СВЕТ И ДЕТАЛИ</span>
+                                    <h3>Президиум с мягким светом и декоративными акцентами</h3>
+                                </div>
+                                <span class="zoom-icon"><i data-lucide="maximize-2"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item details presidium" data-src="assets/images/portfolio/prezidium/010626-9.webp">
+                        <div class="gallery-img-container">
+                            <img src="assets/images/portfolio/prezidium/010626-9.webp" alt="Элегантный стол молодожёнов в светлой палитре" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <span class="category">СОВРЕМЕННАЯ КЛАССИКА</span>
+                                    <h3>Элегантный стол молодожёнов в светлой палитре</h3>
+                                </div>
+                                <span class="zoom-icon"><i data-lucide="maximize-2"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item classic presidium" data-src="assets/images/portfolio/prezidium/010626-34.webp">
+                        <div class="gallery-img-container">
+                            <img src="assets/images/portfolio/prezidium/010626-34.webp" alt="Президиум с выразительными цветочными композициями" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <span class="category">ФЛОРИСТИКА</span>
+                                    <h3>Президиум с выразительными цветочными композициями</h3>
+                                </div>
+                                <span class="zoom-icon"><i data-lucide="maximize-2"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item modern presidium" data-src="assets/images/portfolio/prezidium/010626-40.webp">
+                        <div class="gallery-img-container">
+                            <img src="assets/images/portfolio/prezidium/010626-40.webp" alt="Оформление стола пары в цельной свадебной стилистике" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <span class="category">БАНКЕТНАЯ ЗОНА</span>
+                                    <h3>Оформление стола пары в цельной свадебной стилистике</h3>
+                                </div>
+                                <span class="zoom-icon"><i data-lucide="maximize-2"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Item 1 (Classic -> presidium) -->
                     <div class="gallery-item classic presidium" data-src="assets/images/portfolio/prezidium/3ibnF-ocr31osg7khy0ySW-rvndnjYMi5VWI42AgMuDLhgRC8oMJD4N8MQKW6d6vxXmfqcmJl0dmRiabbC9Aao-W.webp">
                         <div class="gallery-img-container">
@@ -863,23 +882,114 @@
                         </div>
                         <!-- Album Pagination / Load More -->
                         <div class="album-pagination" style="text-align: center; margin-top: 30px;">
-                            <button class="btn btn-outline-white load-more-album-btn">Показать еще <i data-lucide="plus"></i></button>
+                            <button class="btn btn-outline-white load-more-album-btn">Показать ещё <i data-lucide="plus"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Album 3: Украшение залов -->
+                <!-- Album 3: РЈРєСЂР°С€РµРЅРёРµ Р·Р°Р»РѕРІ -->
                 <div class="album-container" id="album-table">
-                    <div class="album-banner glass-panel" style="background-image: linear-gradient(to right, rgba(21, 21, 20, 0.92) 30%, rgba(21, 21, 20, 0.45) 100%), url('assets/images/portfolio/zal/3MHPZRxZewUMAUctaH7Eh6fHq20p4jI_LfKQuo94kElwRpd41rn7aiD8TYl-LmXWXb2PzKP5vBuhl4_Jhg2BEaCR.webp');">
+                    <div class="album-banner glass-panel">
                         <div class="album-banner-content">
-                            <span class="album-count gold">31 фото</span>
-                            <h2>Украшение банкетных залов и флористика</h2>
-                            <p>Композиции на столы гостей, сервировка, полиграфия, свечи и подвесные потолочные инсталляции.</p>
+                            <span class="album-count gold">37 фото</span>
+                            <h2>Оформление залов и гостевых столов</h2>
+                            <p>Цельный образ банкетного пространства: президиум, столы гостей, текстиль, сервировка и свет.</p>
                             <button class="btn btn-primary btn-sm toggle-album-btn">Открыть альбом <i data-lucide="chevron-down"></i></button>
                         </div>
                     </div>
                     <div class="album-grid-wrapper">
                         <div class="portfolio-full-grid">
+                    <div class="gallery-item classic table" data-src="assets/images/portfolio/zal/010626-3.webp">
+                        <div class="gallery-img-container">
+                            <img src="assets/images/portfolio/zal/010626-3.webp" alt="Общий вид зала с цельной свадебной композицией" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <span class="category">БАНКЕТНЫЙ ЗАЛ</span>
+                                    <h3>Общий вид зала с цельной свадебной композицией</h3>
+                                </div>
+                                <span class="zoom-icon"><i data-lucide="maximize-2"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item modern table" data-src="assets/images/portfolio/zal/010626-13.webp">
+                        <div class="gallery-img-container">
+                            <img src="assets/images/portfolio/zal/010626-13.webp" alt="Сервировка и флористика в единой палитре" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <span class="category">ГОСТЕВЫЕ СТОЛЫ</span>
+                                    <h3>Сервировка и флористика в единой палитре</h3>
+                                </div>
+                                <span class="zoom-icon"><i data-lucide="maximize-2"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item details table" data-src="assets/images/portfolio/zal/010626-17.webp">
+                        <div class="gallery-img-container">
+                            <img src="assets/images/portfolio/zal/010626-17.webp" alt="Гостевой стол с акцентом на текстиль и свечи" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <span class="category">ДЕКОР СТОЛА</span>
+                                    <h3>Гостевой стол с акцентом на текстиль и свечи</h3>
+                                </div>
+                                <span class="zoom-icon"><i data-lucide="maximize-2"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item classic table" data-src="assets/images/portfolio/zal/010626-30.webp">
+                        <div class="gallery-img-container">
+                            <img src="assets/images/portfolio/zal/010626-30.webp" alt="Световые акценты и оформление банкетного пространства" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <span class="category">СВЕТОВАЯ АТМОСФЕРА</span>
+                                    <h3>Световые акценты и оформление банкетного пространства</h3>
+                                </div>
+                                <span class="zoom-icon"><i data-lucide="maximize-2"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item modern table" data-src="assets/images/portfolio/zal/010626-31.webp">
+                        <div class="gallery-img-container">
+                            <img src="assets/images/portfolio/zal/010626-31.webp" alt="Свадебный зал с продуманной посадкой и декором" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <span class="category">ПРЕЗЕНТАЦИЯ ЗАЛА</span>
+                                    <h3>Свадебный зал с продуманной посадкой и декором</h3>
+                                </div>
+                                <span class="zoom-icon"><i data-lucide="maximize-2"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item details table" data-src="assets/images/portfolio/zal/010626-35.webp">
+                        <div class="gallery-img-container">
+                            <img src="assets/images/portfolio/zal/010626-35.webp" alt="Детали сервировки и флористические акценты" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <span class="category">СВАДЕБНЫЕ ДЕТАЛИ</span>
+                                    <h3>Детали сервировки и флористические акценты</h3>
+                                </div>
+                                <span class="zoom-icon"><i data-lucide="maximize-2"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item classic table" data-src="assets/images/portfolio/zal/010626-37.webp">
+                        <div class="gallery-img-container">
+                            <img src="assets/images/portfolio/zal/010626-37.webp" alt="Оформление банкетного пространства в светлой эстетике" loading="lazy">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <span class="category">ЭЛЕГАНТНЫЙ ПРИЁМ</span>
+                                    <h3>Оформление банкетного пространства в светлой эстетике</h3>
+                                </div>
+                                <span class="zoom-icon"><i data-lucide="maximize-2"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Item 1 (Classic -> table) -->
                     <div class="gallery-item classic table" data-src="assets/images/portfolio/zal/1.webp">
                         <div class="gallery-img-container">
@@ -1316,18 +1426,18 @@
                         </div>
                         <!-- Album Pagination / Load More -->
                         <div class="album-pagination" style="text-align: center; margin-top: 30px;">
-                            <button class="btn btn-outline-white load-more-album-btn">Показать еще <i data-lucide="plus"></i></button>
+                            <button class="btn btn-outline-white load-more-album-btn">Показать ещё <i data-lucide="plus"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Album 4: 3D модели декораций -->
+                <!-- Album 4: 3D РјРѕРґРµР»Рё РґРµРєРѕСЂР°С†РёР№ -->
                 <div class="album-container" id="album-3d">
-                    <div class="album-banner glass-panel" style="background-image: linear-gradient(to right, rgba(21, 21, 20, 0.92) 30%, rgba(21, 21, 20, 0.45) 100%), url('assets/images/portfolio/3d/3d_decor_1.webp');">
+                    <div class="album-banner glass-panel">
                         <div class="album-banner-content">
                             <span class="album-count gold">13 фото</span>
-                            <h2>3D модели декораций и эскизы проектов</h2>
-                            <p>Трехмерная визуализация и эскизы будущего оформления: концепты президиумов, фотозон и выездных регистраций.</p>
+                            <h2>3D-визуализации и дизайн-проекты</h2>
+                            <p>Предварительные концепции оформления: схемы, визуализации и подбор декоративных решений до монтажа.</p>
                             <button class="btn btn-primary btn-sm toggle-album-btn">Открыть альбом <i data-lucide="chevron-down"></i></button>
                         </div>
                     </div>
@@ -1505,254 +1615,37 @@
                         </div>
                         <!-- Album Pagination / Load More -->
                         <div class="album-pagination" style="text-align: center; margin-top: 30px;">
-                            <button class="btn btn-outline-white load-more-album-btn">Показать еще <i data-lucide="plus"></i></button>
+                            <button class="btn btn-outline-white load-more-album-btn">Показать ещё <i data-lucide="plus"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <div class="more-works-vk" style="text-align: center; margin-top: 40px; font-size: 0.85rem; color: var(--text-muted-light);">
-                    Еще больше наших работ в нашей группе ВКонтакте: <a href="https://vk.com/decorverywell46" target="_blank" style="color: var(--primary); text-decoration: underline;">vk.com/decorverywell46</a>
+                <div class="more-works-vk">
+                    Ещё больше наших работ в нашей группе ВКонтакте: <a href="https://vk.com/decorverywell46" target="_blank">vk.com/decorverywell46</a>
                 </div>
 
-            </div>
-        </section>
-
-        <!-- Reviews Section -->
-        <section id="reviews" class="reviews-section">
-            <div class="container">
-                <div class="section-header-center">
-                    <span class="section-tag gold">Отзывы невест</span>
-                    <h2 class="section-title text-dark">Искренние слова благодарности</h2>
-                    <p class="section-subtitle text-dark" style="color: var(--text-dark) !important;">Свадебный декор — это эмоции. Спасибо, что доверяете нам самые важные моменты вашей жизни.</p>
-                </div>
-
-                <div class="reviews-grid">
-                    <!-- Review 1 -->
-                    <div class="review-card">
-                        <div>
-                            <div class="review-header">
-                                <img src="assets/images/portfolio/avatar_maria.webp" alt="Мария" class="review-couple-img">
-                                <div class="review-couple-info">
-                                    <h4>Мария и Александр</h4>
-                                    <span>12 июля 2025 • Ресторан «Гринн»</span>
-                                </div>
-                            </div>
-                            <div class="review-rating">
-                                <i data-lucide="star"></i>
-                                <i data-lucide="star"></i>
-                                <i data-lucide="star"></i>
-                                <i data-lucide="star"></i>
-                                <i data-lucide="star"></i>
-                            </div>
-                            <p class="review-text">
-                                «Ольга, спасибо вам огромное за сказку, которую вы создали на нашей свадьбе! Когда мы зашли в зал, у меня перехватило дыхание. Все было настолько изысканно, нежно и продумано до мелочей. Наши гости до сих пор вспоминают невероятные цветочные композиции и то, как волшебно светились свечи. Вы настоящий профессионал с безупречным вкусом!»
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Review 2 -->
-                    <div class="review-card">
-                        <div>
-                            <div class="review-header">
-                                <img src="assets/images/portfolio/avatar_ekaterina.webp" alt="Екатерина" class="review-couple-img">
-                                <div class="review-couple-info">
-                                    <h4>Екатерина и Дмитрий</h4>
-                                    <span>24 августа 2025 • Усадьба «Архангельское»</span>
-                                </div>
-                            </div>
-                            <div class="review-rating">
-                                <i data-lucide="star"></i>
-                                <i data-lucide="star"></i>
-                                <i data-lucide="star"></i>
-                                <i data-lucide="star"></i>
-                                <i data-lucide="star"></i>
-                            </div>
-                            <p class="review-text">
-                                «Мы очень рады, что выбрали именно Very Well Décor. Ольга тонко почувствовала наше настроение и концепцию свадьбы. Оформление в стиле модерн с элементами неона получилось невероятно стильным и современным, именно то, о чем мы мечтали! Подвесные инсталляции над столом президиума — это шедевр. Спасибо за ваш труд и за то, что все прошло идеально!»
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Review 3 -->
-                    <div class="review-card">
-                        <div>
-                            <div class="review-header">
-                                <img src="assets/images/portfolio/avatar_anna.webp" alt="Анна" class="review-couple-img">
-                                <div class="review-couple-info">
-                                    <h4>Анна и Сергей</h4>
-                                    <span>05 сентября 2025 • Загородный клуб «Белая дача»</span>
-                                </div>
-                            </div>
-                            <div class="review-rating">
-                                <i data-lucide="star"></i>
-                                <i data-lucide="star"></i>
-                                <i data-lucide="star"></i>
-                                <i data-lucide="star"></i>
-                                <i data-lucide="star"></i>
-                            </div>
-                            <p class="review-text">
-                                «Оформление нашей свадьбы в стиле Бохо-шик превзошло все наши ожидания! Сухоцветы, пампасная трава, ретро-гирлянды и обилие свечей создали такую теплую и уютную атмосферу. Все было так гармонично и эстетично, каждая деталь радовала глаз. Ольга была на связи весь период подготовки и учла все-все пожелания. Огромное спасибо!»
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Review 4 -->
-                    <div class="review-card">
-                        <div>
-                            <div class="review-header">
-                                <img src="assets/images/portfolio/avatar_julia.webp" alt="Юлия" class="review-couple-img">
-                                <div class="review-couple-info">
-                                    <h4>Юлия и Владислав</h4>
-                                    <span>18 июня 2025 • Отель «Marriott»</span>
-                                </div>
-                            </div>
-                            <div class="review-rating">
-                                <i data-lucide="star"></i>
-                                <i data-lucide="star"></i>
-                                <i data-lucide="star"></i>
-                                <i data-lucide="star"></i>
-                                <i data-lucide="star"></i>
-                            </div>
-                            <p class="review-text">
-                                «Ольга Беляева и ее команда сотворили настоящее чудо. Подготовка была очень легкой и приятной. Мы выбрали классический изумрудно-золотой декор, и результат поразил нас и всех гостей своей роскошью и величием. Прекрасная флористика, идеальный текстиль и невероятно красивое освещение. Это была идеальная свадьба!»
-                            </p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
 
         <!-- CTA Section -->
-        <section class="subpage-cta-section">
+        <section class="subpage-cta-section portfolio-final-cta">
             <div class="container">
                 <h3>Хотите обсудить декор вашей свадьбы?</h3>
-                <p>Мы поможем рассчитать смету и подготовим для вас персональную презентацию с референсами.</p>
-                <a href="/#contacts" class="btn btn-primary">Заказать расчет сметы <i data-lucide="arrow-right"></i></a>
+                <p>Расскажите о площадке, дате и формате торжества — мы подскажем, какие решения лучше подойдут под вашу свадьбу.</p>
+                <a href="index.html#contacts" class="btn btn-primary">Обсудить проект <i data-lucide="arrow-right"></i></a>
             </div>
         </section>
 
     </main>
-<footer class="main-footer">
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <a href="/" class="logo-wrapper">
-                    <img src="assets/images/logo.webp" alt="Very Well Décor" class="footer-logo" width="38" height="38">
-                    <div class="logo-text">
-                        <span class="brand-name text-white">Very Well</span>
-                        <span class="brand-sub gold">DÉCOR STUDIO</span>
-                    </div>
-                </a>
-                <p class="footer-brand-desc">
-                    Изысканное оформление и авторская флористика для особенных свадебных торжеств по всей России.
-                </p>
-            </div>
-            
-            <div class="footer-links">
-                <h4>Разделы</h4>
-                <ul>
-                    <li><a href="/">Главная</a></li>
-                    <li><a href="/#about">О нас</a></li>
-                    <li><a href="/portfolio">Портфолио</a></li>
-                    <li><a href="/#quiz">Подбор стиля</a></li>
-                    <li><a href="/#prices">Услуги и Цены</a></li>
-                </ul>
-            </div>
+    {{> footer }}
 
-            <div class="footer-cities">
-                <h4>География работы</h4>
-                <ul>
-                    <li><strong>Курск</strong> — Мастерская и штаб-квартира</li>
-                    <li><strong>Воронеж</strong> — Выездные проекты (2-3 часа пути)</li>
-                    <li><strong>Москва & МО</strong> — Масштабные проекты</li>
-                    <li><strong>Вся Россия</strong> — Готовы к выездам в любой город</li>
-                </ul>
-            </div>
+    {{> widgets }}
 
-            <div class="footer-contacts">
-                <h4>Контакты</h4>
-                <p>Ольга Беляева — ведущий декоратор</p>
-                <a href="tel:+79207222202" class="footer-phone">+7 (920) 722-22-02</a>
-                <div class="footer-socials">
-                    <a href="https://instagram.com/decorverywell" target="_blank" class="social-icon" aria-label="Instagram">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-                    </a>
-                    <a href="https://t.me/decorverywell46" target="_blank" class="social-icon" aria-label="Telegram">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" x2="11" y1="2" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-                    </a>
-                    <a href="https://vk.com/decorverywell46" target="_blank" class="social-icon" aria-label="VKontakte">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.45 5.96c.17-.56-.01-.97-.8-.97h-2.62c-.67 0-.98.35-1.15.75 0 0-1.33 3.24-3.22 5.35-.61.61-.89.8-.12.8.5 0 1.97-.61 1.97-2.08V8.16c0-.66-.19-.97-.75-.97H14.1c-.42 0-.68.31-.68.61 0 .63.94.77 1.03 2.54v3.83c0 .84-.15.99-.48.99-1 0-3.23-3.25-4.59-6.98-.25-.69-.49-.97-1.17-.97H5.6c-.75 0-.9.35-.9.75 0 .7 5.3 12.6 11.23 12.6h2.62c.75 0 .9-.35.9-.75v-2.35c0-.67.14-.81.61-.81.35 0 .96.18 2.37 1.54 1.62 1.62 1.88 2.37 2.79 2.37h2.62c.75 0 1.12-.35.9-.97-.24-.73-1.08-1.79-2.2-3.05-.61-.71-1.53-1.48-1.81-1.87-.39-.49-.28-.71 0-1.16 0 0 3.19-4.49 3.52-6z"/></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom container">
-            <p>&copy; 2026 Студия декора Very Well Decor. Все права защищены.</p>
-            <p><a href="/privacy" style="color: inherit; text-decoration: underline;">Политика конфиденциальности</a></p>
-            <p>Дизайн и разработка: <a href="https://linktr.ee/pluxury" target="_blank" style="color: inherit; text-decoration: underline;">pluxury design</a></p>
-        </div>
-    </footer>
-
-    <!-- Premium Lightbox Modal for Gallery Viewing -->
-    <div id="lightbox-modal" class="lightbox-modal">
-        <button class="lightbox-close" aria-label="Закрыть"><i data-lucide="x"></i></button>
-        <button class="lightbox-nav prev-pic" aria-label="Предыдущее фото"><i data-lucide="chevron-left"></i></button>
-        <div class="lightbox-content">
-            <img id="lightbox-img" src="" alt="Детали декора">
-            <div class="lightbox-caption-box">
-                <span id="lightbox-category" class="lightbox-category gold">Классический стиль</span>
-                <h4 id="lightbox-title">Золотая симфония</h4>
-                <p id="lightbox-location"><i data-lucide="map-pin"></i> Ресторан Гринн</p>
-            </div>
-        </div>
-        <button class="lightbox-nav next-pic" aria-label="Следующее фото"><i data-lucide="chevron-right"></i></button>
-    </div>
-
-    <!-- Success Modal -->
-    <div id="success-modal" class="success-modal">
-        <div class="success-box glass-panel">
-            <button class="success-close"><i data-lucide="x"></i></button>
-            <div class="success-icon"><i data-lucide="sparkles"></i></div>
-            <h3>Ваша заявка принята!</h3>
-            <p id="success-message">Мы свяжемся с вами в течение 2 часов, чтобы обсудить детали вашего торжества.</p>
-            <button class="btn btn-primary btn-sm close-success-btn">Отлично</button>
-        </div>
-    </div>
-
-    <!-- Floating Chat Widgets -->
-    <div class="floating-contact-widgets">
-        <div class="widgets-trigger" aria-label="Открыть контакты">
-            <i data-lucide="message-circle" class="trigger-icon open-icon"></i>
-            <i data-lucide="x" class="trigger-icon close-icon" style="display: none;"></i>
-        </div>
-        <div class="widgets-list">
-            <a href="https://wa.me/79207222202" target="_blank" class="widget-btn whatsapp" aria-label="Написать в WhatsApp"><i data-lucide="phone"></i></a>
-            <a href="https://t.me/decorverywell46" target="_blank" class="widget-btn telegram" aria-label="Написать в Telegram"><i data-lucide="send"></i></a>
-            <a href="https://max.ru/u/f9LHodD0cOJ4Jc7xIibcgKLWkVCSGxh7HkOtTG8Z7isYyR0eCJTHIOxyhcg" target="_blank" class="widget-btn max-messenger" aria-label="Написать в MAX">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" style="width: 20px; height: 20px;"><path fill-rule="evenodd" d="M50.76 0c27.53 0 49.12 22.34 49.12 49.89S77.61 99.23 51.02 99.23c-9.43 0-14.01-1.33-21.37-6.54-.5-.36-1.2-.26-1.63.19-5.66 6.04-20.17 10.28-20.83 2.03C7.19 80.53 0 71.18 0 49.61 0 21.3 23.22 0 50.76 0m.77 24.55c-13.07-.68-23.26 8.39-25.51 22.58-1.86 11.75 1.44 26.07 4.26 26.8 1.2.3 4.08-1.9 6.18-3.88.4-.37.99-.44 1.45-.15 3.27 2 6.97 3.5 11.05 3.71 13.42.7 25.3-9.8 26-23.21.71-13.42-10.01-25.14-23.43-25.85" clip-rule="evenodd"></path></svg>
-            </a>
-        </div>
-    </div>
-
-    <!-- Lucide Icons CDN -->
-    
-    <!-- Back to Top Button -->
-    <button id="back-to-top" class="back-to-top-btn" aria-label="Наверх">
-        <i data-lucide="arrow-up"></i>
-    </button>
-
-    <!-- Cookie Notice Banner -->
-    <div id="cookie-notice" class="cookie-notice glass-panel">
-        <div class="cookie-content">
-            <i data-lucide="cookie" class="cookie-icon"></i>
-            <p>Мы используем cookies для улучшения работы сайта. <a href="/privacy" class="cookie-link">Политика конфиденциальности</a>.</p>
-        </div>
-        <button id="cookie-accept-btn" class="btn btn-primary btn-sm">OK</button>
-    </div>
-
-<script src="https://unpkg.com/lucide@latest" defer></script>
-    <!-- Script -->
-    <script src="assets/js/main.min.js" defer></script>
+    {{> scripts }}
 </body>
 </html>
+
+
+
 
 
