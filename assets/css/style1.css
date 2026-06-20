@@ -1399,6 +1399,13 @@ textarea:focus {
     background-color: white;
     box-shadow: 0 4px 12px rgba(156, 133, 96, 0.08);
 }
+input[type="date"] {
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
 
 .contact-pref-group { display: flex; gap: 15px; margin-top: 5px; }
 .pref-option { flex: 1; position: relative; cursor: pointer; }
@@ -3379,11 +3386,15 @@ body.theme-white-bridal .faq-more-link a:hover { color: #7F6A4A !important; }
     body.theme-white-bridal #homepage-reviews .testimonials-container { grid-template-columns: 1fr !important; gap: 34px !important; }
     body.theme-white-bridal #homepage-reviews .testimonial-slide { min-height: 445px !important; height: 445px !important; max-height: 445px !important; }
     body.theme-white-bridal #process .process-editorial-layout { margin-top: 0 !important; }
-    body.theme-white-bridal #process .process-image-col { transform: none; }
+    body.theme-white-bridal #process .process-image-col,
+    body.theme-white-bridal #process .process-timeline-col {
+        transform: none !important;
+        opacity: 1 !important;
+    }
     body.theme-white-bridal #process .process-image-col {
         width: 100% !important;
         max-width: none !important;
-        margin: 0 !important;
+        margin: 0 auto !important;
     }
     body.theme-white-bridal #process .process-image-container { width: 100% !important; }
 }
@@ -3454,6 +3465,7 @@ body.theme-white-bridal .faq-more-link a:hover { color: #7F6A4A !important; }
     }
     body.theme-white-bridal #process .process-timeline-list {
         padding-left: 44px;
+        padding-right: 20px !important;
     }
     body.theme-white-bridal #process .process-vertical-line {
         left: 16px;
@@ -3480,16 +3492,17 @@ body.theme-white-bridal .faq-more-link a:hover { color: #7F6A4A !important; }
         line-height: 1.46;
     }
     body.theme-white-bridal #process .process-cta-block {
-        margin-top: 30px;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        width: calc(100vw - 32px);
-        max-width: 360px;
-        padding-left: 0;
-        padding-right: 0;
-        align-items: center;
-        text-align: center;
+        margin: 30px auto 0 auto !important;
+        position: static !important;
+        transform: none !important;
+        width: 100% !important;
+        max-width: 360px !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
     }
     body.theme-white-bridal #process .process-cta-text {
         margin-bottom: 0;
@@ -4506,6 +4519,7 @@ body.theme-white-bridal .faq-more-link a:hover { color: #7F6A4A !important; }
     }
     body.theme-white-bridal #process .process-timeline-list {
         padding-left: 42px;
+        padding-right: 20px !important;
     }
     body.theme-white-bridal #process .process-vertical-line {
         left: 15px;
@@ -4532,16 +4546,17 @@ body.theme-white-bridal .faq-more-link a:hover { color: #7F6A4A !important; }
         line-height: 1.44;
     }
     body.theme-white-bridal #process .process-cta-block {
-        margin-top: 20px;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        width: calc(100vw - 32px);
-        max-width: 360px;
-        padding-left: 0;
-        padding-right: 0;
-        align-items: center;
-        text-align: center;
+        margin: 20px auto 0 auto !important;
+        position: static !important;
+        transform: none !important;
+        width: 100% !important;
+        max-width: 360px !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
     }
     body.theme-white-bridal #process .process-cta-text {
         text-align: center;
