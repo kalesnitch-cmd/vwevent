@@ -492,6 +492,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 })
             }).catch(err => console.error('Telegram notification error:', err));
 
+            // Trigger Yandex Metrika Goal
+            if (typeof ym === 'function') {
+                ym(110022392, 'reachGoal', 'FORM_SUBMIT');
+            }
+
             // Show Success Modal
             const successModal = document.getElementById('success-modal');
             const successMsg = document.getElementById('success-message');
@@ -1018,4 +1023,21 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         // initCustomCursor();
     };
+
+    // Yandex Metrika Click Goals
+    document.addEventListener('click', (e) => {
+        const link = e.target.closest('a');
+        if (link && link.href) {
+            const href = link.href;
+            if (href.startsWith('tel:')) {
+                if (typeof ym === 'function') {
+                    ym(110022392, 'reachGoal', 'CLICK_PHONE');
+                }
+            } else if (href.includes('wa.me') || href.includes('t.me') || href.includes('max.ru')) {
+                if (typeof ym === 'function') {
+                    ym(110022392, 'reachGoal', 'CLICK_MSGR');
+                }
+            }
+        }
+    });
 });
