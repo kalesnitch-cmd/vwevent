@@ -206,11 +206,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const gallery = document.querySelector('.portfolio-grid');
     const progressFillBar = document.querySelector('.progress-bar-fill');
 
+    let galleryProgressFrame = null;
+
     const updateGalleryProgress = () => {
         if (!gallery || !progressFillBar) return;
-        const maxScroll = gallery.scrollWidth - gallery.clientWidth;
-        const percentage = maxScroll > 0 ? (gallery.scrollLeft / maxScroll) * 100 : 0;
-        progressFillBar.style.width = `${percentage}%`;
+
+        if (galleryProgressFrame !== null) return;
+
+        galleryProgressFrame = requestAnimationFrame(() => {
+            const maxScroll = gallery.scrollWidth - gallery.clientWidth;
+            const percentage = maxScroll > 0 ? (gallery.scrollLeft / maxScroll) * 100 : 0;
+            progressFillBar.style.width = `${percentage}%`;
+            galleryProgressFrame = null;
+        });
     };
 
     if (gallery) {
