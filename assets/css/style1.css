@@ -3593,7 +3593,7 @@ body.theme-white-bridal .faq-more-link a:hover { color: #7F6A4A !important; }
     }
     body.theme-white-bridal .hero-bg {
         height: 100%;
-        background-image: url('/assets/images/newhero-mobile.webp');
+        background-image: url('/assets/images/optimized/newhero-mobile.webp');
         background-size: 115% auto;
         background-position: center calc(100% + 96px + 14svh);
     }
